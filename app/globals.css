@@ -19,11 +19,15 @@
         /* --background: #aa0a0a; */
         --foreground: #ededed;
         /* --foreground: #0707aa; */
+        /* --bgA: url(@/public/celeste_summit_win_gif.gif); */
+        --bgURLA: url(@/public/celeste_summit_win_gif.gif);
+        --bgURLB: url(@/public/happy_gif.gif);
     }
 }
 
 body {
     background: var(--background);
+    background-size: cover;
     color: var(--foreground);
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -33,4 +37,28 @@ body {
     color: greenyellow;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
         "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    background: var(--bgURLB);
+    background-size: cover;
+}
+
+.opacityOverride {
+    opacity: 1 !important;
+}
+
+.bgDefault {
+    background: var(--background);
+    background-size: cover;
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bgA {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(@/public/celeste_summit_win_gif.gif);
+    background-size: cover;
+}
+.bgB {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(@/public/happy_gif.gif);
+    background-size: cover;
 }
