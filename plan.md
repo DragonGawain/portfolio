@@ -10,10 +10,6 @@
 # Projects to include
 
 -   Jams:
-
-    -   (sadly no root beer :( )
-    -   Just, look at my itch page and pull them all.. (and by all I mean only the ones that are not complete jank)
-
 -   Nalbointo
 -   Infinite runner (not currently on itch)
 -   Guardian game (?) (not currently on itch)

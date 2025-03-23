@@ -3,15 +3,104 @@ import ProjectCard from "@/components/ProjectCard";
 import FooterLink from "@/components/FooterLink";
 import { useState } from "react";
 
+// TODO:: order my projects by how much I want other people to see them (not all jam games need to be together, nor do they need to be in chronological order)
 export default function Home() {
     const [bgClassName, SetBg] = useState("");
 
     return (
         <div className={`min-h-screen p-8 pb-20 gap-16 sm:p-20 ${bgClassName}`}>
+            <p>
+                I've done quite a few game jams, so I'll start by listing out
+                all of my jam projects! Most of these were 48 hour jams. I'll
+                point out the ones that weren't 48 hours.
+            </p>
             <div className="opacityOverride">
                 <ProjectCard
                     setBg={SetBg}
-                    projTitle="CodingCards"
+                    projTitle="Rooty's Adventures: Quest For The Root Beer Float"
+                    projDesc="Rooty's adventures was the first game jam I ever did and what kicked off my entire game dev career! It's a submission to the 2023 Global Game Jam, the theme was 'Roots'. As I had been pretty inexperienced at the time, I did mostly level and game design. I learnt a lot from this jam! February 06, 2023."
+                    buttonRef="/projects/rooty"
+                    bgClassName="bgA"
+                />
+                {/* TODO:: add more stuff to what I did in this jam. I forget.. (also verify the other jams)*/}
+                {/* Mention most important contributions here! Details can go on the project page. */}
+                <ProjectCard
+                    setBg={SetBg}
+                    projTitle="Apollo"
+                    projDesc="Shortly after my first game jam, I found another one to do! The theme of the Montreal Game Jam 2023 was 'Historical Event'. By this time, I was already a key member of the team. I played a large role in the character controller as well as other systems. I was also the creative director for this jam, gaining more experience with game and level design. April 30, 2023."
+                    buttonRef="apollo"
+                    bgClassName="bgA"
+                />
+                <ProjectCard
+                    setBg={SetBg}
+                    projTitle="Strung Along"
+                    projDesc="The next game jam I participated in was hosted by my university, Concordia. The theme of the Concordia Game Jam 2023 was 'The Space Between'. I spent the majority of this game jam programming a string that connected our two player characters. I also made the character controllers, and some other game mechanics. I wasn't as involved in the game design for this jam as I was too busy programming the string. November 06, 2023."
+                    buttonRef="/projects/strung_along"
+                    bgClassName="bgA"
+                />
+                <ProjectCard
+                    setBg={SetBg}
+                    projTitle="Cheezy Lunar Defender"
+                    projDesc="The Global Game Jam 2024 had the theme 'Make Me Laugh'. I was the lead programmer for this one, responsible for all of the actions the character could do, as well as how the projectiles behave. Jan 28, 2024."
+                    buttonRef="/projects/cheezy_lunar"
+                    bgClassName="bgA"
+                />
+                <ProjectCard
+                    setBg={SetBg}
+                    projTitle="THE: Floor is Lava"
+                    projDesc="The Creative Jam 2024 hosted by NAD had the theme of 'Disappearing'. For this 46 hour jam, I sought out an inexperienced team with the goal of teaching them as much as I could. I lead the discussion on game design and was the lead programmer on the team, making the character controller and other key gameplay elements. September 22, 2024."
+                    buttonRef="/projects/floor_is_lava"
+                    bgClassName="bgA"
+                />
+                <ProjectCard
+                    setBg={SetBg}
+                    projTitle="Operation: YJLTG"
+                    projDesc="Operation: YJLTG was made under the theme of 'Operation' for the Phantom Game Jam 2024 (hosted by Concordia). I once more sought out an inexperienced team so I could teach them as much as I could. This 7 day jam had an additional component of building a custom controller for the game. I once more lead the game design discussion and was programmed most of the game including the character controller, the enemy AI, biome specific effects, and more. I also did my best to teach my team as many of my skills that I could. October 20, 2024."
+                    buttonRef="/projects/operation_yjltg"
+                    bgClassName="bgA"
+                />
+                {/* <ProjectCard
+                    setBg={SetBg}
+                    projTitle="gamelabs"
+                    projDesc=""
+                    buttonRef="/projects/"
+                    bgClassName="bgA"
+                /> */}
+                <p>That's it for the game jams!</p>
+                <ProjectCard
+                    setBg={SetBg}
+                    projTitle="Nalbointo vs the Hopocalypse"
+                    projDesc=""
+                    buttonRef="/projects/nalbointo"
+                    bgClassName="bgA"
+                />
+                {/* not currently on itch */}
+                <ProjectCard
+                    setBg={SetBg}
+                    projTitle="Endless runner"
+                    projDesc=""
+                    buttonRef="/projects/endless_runner"
+                    bgClassName="bgA"
+                />
+                {/* not currently on itch */}
+                <ProjectCard
+                    setBg={SetBg}
+                    projTitle="Guardian game"
+                    projDesc=""
+                    buttonRef="/projects/guardian_game"
+                    bgClassName="bgA"
+                />
+                {/* not currently on itch */}
+                <ProjectCard
+                    setBg={SetBg}
+                    projTitle="Conways Game Of Life"
+                    projDesc=""
+                    buttonRef="/projects/cgl"
+                    bgClassName="bgA"
+                />
+                <ProjectCard
+                    setBg={SetBg}
+                    projTitle="Coding Cards"
                     projDesc="Coding cards is a roguelike deckbuilder where the cards have lines of code. It's currently my main project!"
                     buttonRef="/projects/coding_cards"
                     bgClassName="bgA"
