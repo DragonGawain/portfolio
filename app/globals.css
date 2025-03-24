@@ -20,8 +20,8 @@
         --foreground: #ededed;
         /* --foreground: #0707aa; */
         /* --bgA: url(@/public/celeste_summit_win_gif.gif); */
-        --bgURLA: url(@/public/celeste_summit_win_gif.gif);
-        --bgURLB: url(@/public/happy_gif.gif);
+        /* --bgURLA: url(@/public/celeste_summit_win_gif.gif);
+        --bgURLB: url(@/public/happy_gif.gif); */
     }
 }
 
@@ -39,6 +39,110 @@ body {
         "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     background: var(--bgURLB);
     background-size: cover;
+    /* background-size: 100vw 100vh; */
+}
+
+.opacityOverride {
+    opacity: 1 !important;
+}
+
+.bgDefault {
+    background: var(--background);
+    background-size: cover;
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bgA {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(@/public/gifs/celeste_summit_win_gif.gif) center center no-repeat;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+}
+.bgB {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(@/public/gifs/happy_gif.gif) center center no-repeat;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+}
+
+/* .bgRooty {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(@/public/gifs/.gif) center center no-repeat;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+} */
+/* .bgApollo {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(@/public/gifs/.gif) center center no-repeat;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+} */
+/* .bgStrungAlong {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(@/public/gifs/.gif) center center no-repeat;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+} */
+/* .bgCheezyLunar {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(@/public/gifs/.gif) center center no-repeat;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+} */
+/* .bgFloorIsLava {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(@/public/gifs/.gif) center center no-repeat;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+} */
+/* .bgOperationYJLTG {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(@/public/gifs/.gif) center center no-repeat;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+} */
+/* .bgGamelabs {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(@/public/gifs/.gif) center center no-repeat;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    } */
+/* .bgNalbointo {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(@/public/gifs/.gif) center center no-repeat;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+} */
+/* .bgEndlessRunner {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(@/public/gifs/.gif) center center no-repeat;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+} */
+/* .bgGuardianGame {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(@/public/gifs/.gif) center center no-repeat;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+} */
+.bgCGL {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(@/public/gifs/cgl.gif) center center no-repeat;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+}
+/* .bgCodingCards {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(@/public/gifs/.gif) center center no-repeat;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+} */
+.bgMinesweeper {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(@/public/gifs/minesweeper.gif) center center no-repeat;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
 }
 
 h1 {
@@ -58,6 +162,7 @@ h2 {
     margin-left: 0;
     margin-right: 0;
     font-weight: bold;
+    top: 0%;
 }
 h3 {
     display: block;
@@ -97,31 +202,8 @@ h6 {
 
 p {
     display: block;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    /* margin-top: 1em; */
+    /* margin-bottom: 1em; */
     margin-left: 0;
     margin-right: 0;
-}
-
-.opacityOverride {
-    opacity: 1 !important;
-}
-
-.bgDefault {
-    background: var(--background);
-    background-size: cover;
-    color: var(--foreground);
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.bgA {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(@/public/celeste_summit_win_gif.gif);
-    background-size: cover;
-    background-position: center center;
-}
-.bgB {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(@/public/happy_gif.gif);
-    background-size: cover;
 }
