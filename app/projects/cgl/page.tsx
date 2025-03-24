@@ -1,27 +1,12 @@
 import Button from "@/components/ui/Button";
 import PageBase from "@/components/ui/PageBase";
 
-export default function CodingCards() {
+export default function CGL() {
     return (
         <div>
-            <h1>Coding cards</h1>
-            <p>This is a page where I talk all about coding cards!</p>
+            <h1>Conway's Game Of Life</h1>
+            <p>This is a page where I talk all about Conway's Game Of Life!</p>
             <Button href="../" text="Return to Main" />
-            {/* <a
-                className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-                href="../"
-            >
-                return to main
-            </a> */}
-            <PageBase>
-                sds
-                <h1>Some title</h1>
-                <p>
-                    some paragraph &quot; s &#34; &#35;sds <br></br>
-                    <br></br>
-                    <br></br> asds some other paragraph
-                </p>
-            </PageBase>
         </div>
     );
 }
