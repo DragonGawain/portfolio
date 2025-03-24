@@ -97,7 +97,7 @@ export default function Home() {
                     projDesc=""
                     buttonRef="/projects/endless_runner"
                     bgClassName="bgA"
-                    imgSrc="/covers/"
+                    imgSrc="/file.svg"
                     imgAltText="Endless runner"
                 />
                 {/* not currently on itch */}
@@ -107,7 +107,7 @@ export default function Home() {
                     projDesc=""
                     buttonRef="/projects/guardian_game"
                     bgClassName="bgA"
-                    imgSrc="/covers/"
+                    imgSrc="/file.svg"
                     imgAltText="Guardian game"
                 />
                 {/* not currently on itch */}

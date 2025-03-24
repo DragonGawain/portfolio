@@ -33,7 +33,7 @@ export default function ProjectCard({
                         <tr>
                             <td className="w-48 h-48">
                                 <Image
-                                    aria-hidden
+                                    // aria-hidden
                                     src={imgSrc}
                                     alt={imgAltText}
                                     width={192}

@@ -3,7 +3,7 @@ import PageBase from "@/components/ui/PageBase";
 
 export default function CGL() {
     return (
-        <div>
+        <div className="projectPage">
             <h1>Conway's Game Of Life</h1>
             <p>This is a page where I talk all about Conway's Game Of Life!</p>
             <Button

@@ -3,7 +3,7 @@ import PageBase from "@/components/ui/PageBase";
 
 export default function CodingCards() {
     return (
-        <div>
+        <div className="projectPage">
             <h1>Coding cards</h1>
             <p>This is a page where I talk all about coding cards!</p>
             <Button

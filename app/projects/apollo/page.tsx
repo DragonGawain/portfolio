@@ -2,7 +2,7 @@ import Button from "@/components/ui/Button";
 
 export default function Apollo() {
     return (
-        <div>
+        <div className="projectPage">
             <h1>Apollo</h1>
             <p>This is a page where I talk all about Apollo!</p>
             <Button

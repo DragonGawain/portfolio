@@ -3,7 +3,7 @@ import PageBase from "@/components/ui/PageBase";
 
 export default function FloorIsLava() {
     return (
-        <div>
+        <div className="projectPage">
             <h1>THE: Floor Is Lava</h1>
             <p>This is a page where I talk all about THE: Floor Is Lava!</p>
             <Button

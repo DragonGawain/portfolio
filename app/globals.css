@@ -19,9 +19,7 @@
         /* --background: #aa0a0a; */
         --foreground: #ededed;
         /* --foreground: #0707aa; */
-        /* --bgA: url(@/public/celeste_summit_win_gif.gif); */
-        /* --bgURLA: url(@/public/celeste_summit_win_gif.gif);
-        --bgURLB: url(@/public/happy_gif.gif); */
+        --text-color: #ededed;
     }
 }
 
@@ -46,6 +44,12 @@ body {
     opacity: 1 !important;
 }
 
+.projectPage {
+    background: var(--background);
+    color: var(--text-color);
+    margin-left: 2em;
+}
+
 .bgDefault {
     background: var(--background);
     background-size: cover;
@@ -56,12 +60,6 @@ body {
 .bgA {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url(@/public/gifs/celeste_summit_win_gif.gif) center center no-repeat;
-    background-size: 100vw 100vh;
-    background-attachment: fixed;
-}
-.bgB {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(@/public/gifs/happy_gif.gif) center center no-repeat;
     background-size: 100vw 100vh;
     background-attachment: fixed;
 }
@@ -205,6 +203,10 @@ p {
     margin-bottom: 1em;
     margin-left: 0;
     margin-right: 0;
+    text-indent: 1.5em;
+}
+p + p {
+    margin-top: 2em;
 }
 ul {
     display: block;
