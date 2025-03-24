@@ -14,20 +14,24 @@ const buttonVariants = cva(
     }
 );
 
+// Not sure why this is exporting the interface..
+// I copied this bit from CommunityGrid, and that's what they did there though, so, shrug
 export interface ButtonProps
     extends React.ButtonHTMLAttributes<HTMLButtonElement>,
         VariantProps<typeof buttonVariants> {
     href: string;
     text: string;
+    newTab?: string;
 }
 
 export default function Button({
     variant = "default",
     href,
     text = "",
+    newTab = "",
 }: ButtonProps) {
     return (
-        <a className={buttonVariants({ variant })} href={href}>
+        <a className={buttonVariants({ variant })} href={href} target={newTab}>
             {text}
         </a>
     );

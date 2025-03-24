@@ -6,6 +6,12 @@ export default function CodingCards() {
         <div>
             <h1>Coding cards</h1>
             <p>This is a page where I talk all about coding cards!</p>
+            <Button
+                variant="itch"
+                href="https://dragongawain.itch.io/coding-cards"
+                text="View on itch"
+                newTab="_blank"
+            />
             <Button href="../" text="Return to Main" />
             {/* <a
                 className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
