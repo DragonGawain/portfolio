@@ -3,7 +3,8 @@ import ProjectCard from "@/components/ProjectCard";
 import FooterLink from "@/components/FooterLink";
 import { useState } from "react";
 
-// TODO:: order my projects by how much I want other people to see them (not all jam games need to be together, nor do they need to be in chronological order)
+// TODO:: Order my projects by how much I want other people to see them (not all jam games need to be together, nor do they need to be in chronological order)
+// TODO:: I may want to restructure how I talk about my projects. Specifically, I might want to move my contributions closer to the top of the project page.
 export default function Home() {
     const [bgClassName, SetBg] = useState("");
 
@@ -20,7 +21,7 @@ export default function Home() {
                     projTitle="Rooty's Adventures: Quest For The Root Beer Float"
                     projDesc="Rooty's adventures was the first game jam I ever did and what kicked off my entire game dev career! It's a submission to the 2023 Global Game Jam, the theme was 'Roots'. As I had been pretty inexperienced at the time, I did mostly level and game design. I learnt a lot from this jam! February 06, 2023."
                     buttonRef="/projects/rooty"
-                    bgClassName="bgA"
+                    bgClassName="bgRooty"
                     imgSrc="/covers/rooty_cover.png"
                     imgAltText="Rooty"
                 />
@@ -31,7 +32,7 @@ export default function Home() {
                     projTitle="Apollo"
                     projDesc="Shortly after my first game jam, I found another one to do! The theme of the Montreal Game Jam 2023 was 'Historical Event'. By this time, I was already a key member of the team. I played a large role in the character controller as well as other systems. I was also the creative director for this jam, gaining more experience with game and level design. April 30, 2023."
                     buttonRef="/projects/apollo"
-                    bgClassName="bgA"
+                    bgClassName="bgApollo"
                     imgSrc="/covers/apollo_cover.png"
                     imgAltText="Apollo"
                 />

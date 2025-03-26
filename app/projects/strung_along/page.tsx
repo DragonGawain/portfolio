@@ -1,5 +1,5 @@
 import Button from "@/components/ui/Button";
-import PageBase from "@/components/ui/PageBase";
+import Tooltip from "@/components/ui/Tooltip";
 
 export default function StrungAlong() {
     return (
@@ -17,17 +17,20 @@ export default function StrungAlong() {
                 our final design though.
             </p>
             <h2>About the game</h2>
-            {/* TODO:: make a tooltip component so I can explain stuff like what a modifier is? */}
             <p>
                 For this jam, we (the team) put a lot of effort into integrating
-                as many modifiers as possible. We ended up with 9 out of the 18
-                modifiers, the most the any team included! The modifier that
-                probably had the largest impact on our game design was 'Name a
-                better pair' (include a cooperative aspect). Our game concept
-                settled into being a 2 player couch-coop game where the two
-                characters were connected via a string. The string represented
-                the space between the two characters and was our interpretation
-                of the theme.
+                as many
+                <Tooltip
+                    text="modifiers"
+                    tooltip="A modifier is an additional restriction/feature that your game includes. Modifiers are completely optional!"
+                />
+                as possible. We ended up with 9 out of the 18 modifiers, the
+                most the any team included! The modifier that probably had the
+                largest impact on our game design was 'Name a better pair'
+                (include a cooperative aspect). Our game concept settled into
+                being a 2 player couch-coop game where the two characters were
+                connected via a string. The string represented the space between
+                the two characters and was our interpretation of the theme.
             </p>
             <h2>My contribution</h2>
             <p>
@@ -93,8 +96,7 @@ export default function StrungAlong() {
                 the nodes from being in the same spot), this helped give the
                 string some 'weight'. It also had the unintended effect of
                 making it so that when one player pulled the other, the moving
-                player was sometimes pulled back. More on that later when I talk
-                about bugs.
+                player was sometimes pulled back.
             </p>
             <h3>String logic: both players are moving</h3>
             <p>
@@ -113,7 +115,47 @@ export default function StrungAlong() {
                 are different than ground physics, if a character was mid air,
                 it was slightly easier to pull on them.
             </p>
-
+            <h3>String gravity and interaction</h3>
+            <p>
+                This challenge was amongst the easiest to solve once the base
+                string was set up. In order to make the string perform better, I
+                decided that only the central node would be affected by gravity.
+                This had the intended effect of pulling the entire string down.
+                While this made it so that some nodes could float, the string
+                was short enough that this wasn't much of an issue. In the end,
+                this decision made the string perform better.
+            </p>
+            <p>
+                Setting up conditional collisions was very simple. We used
+                physics layers so that the string simply would not interact with
+                some walls/floors. We used physics layers for the walls/floors
+                that only one player could pass through as well.
+            </p>
+            <h2>Post jam follow up</h2>
+            <p>
+                After the jam was over, I spent a day going over the string to
+                see if I could improve upon it. That main issues I wanted to
+                solve were the string being able to stretch a bit, as well as
+                the back pull that it sometimes induced. The best smoothing that
+                I found was to use fixed distance joints to connect the nodes.
+                Instead of using my custom pulling logic, the distance joints
+                wimply did not allow the nodes to be too far away from each
+                other while also allowing the nodes to be closer to each other.
+                There were two problems with distance joints. The first problem
+                was that if the nodes were too far apart (i.e. the joints were
+                too long) then string between the nodes would be able to slip
+                over corners and drag the rest of the string with it. The second
+                issue was that distance joints broke when they were too small.
+                To be precise, if I set the maximum distance that the two ends
+                of the joint could be from each other and daisy chained the
+                joints, the maximum distance simply was not respected. If I were
+                to attempt to recreate the string now, I would probably attempt
+                to use distance joints again, but also put colliders or a
+                raycast in between each pair of nodes. This would allow me to
+                detect if the string is slipping past a corner and take some
+                sort of action. I would need to do more testing and
+                experimentation to determine what would work.
+            </p>
             <h3>Technical details overview</h3>
             <ul>
                 <li>Unity version 2021.3.18f1</li>
