@@ -2,14 +2,36 @@
 import ProjectCard from "@/components/ProjectCard";
 import FooterLink from "@/components/FooterLink";
 import { useState } from "react";
+import Switch from "react-switch";
 
 // TODO:: Order my projects by how much I want other people to see them (not all jam games need to be together, nor do they need to be in chronological order)
 // TODO:: I may want to restructure how I talk about my projects. Specifically, I might want to move my contributions closer to the top of the project page.
 export default function Home() {
-    const [bgClassName, SetBg] = useState("");
+    const [bgClassName, SetBg] = useState("bgDefault");
+    const [animateBg, DoAnimateBg] = useState(true);
 
     return (
-        <div className={`min-h-screen p-8 pb-20 gap-16 sm:p-20 ${bgClassName}`}>
+        <div
+            className={`min-h-screen p-8 pb-20 gap-16 sm:p-20  ${
+                animateBg === true ? bgClassName : "bgDefault"
+            } `}
+        >
+            <div>
+                <span className="block m-1">
+                    Toggle background animations on/off
+                </span>
+                <Switch
+                    onChange={function (): // checked: boolean,
+                    // event:
+                    //     | React.SyntheticEvent<MouseEvent | KeyboardEvent>
+                    //     | MouseEvent,
+                    // id: string
+                    void {
+                        DoAnimateBg(!animateBg);
+                    }}
+                    checked={animateBg}
+                />
+            </div>
             <p>
                 I've done quite a few game jams, so I'll start by listing out
                 all of my jam projects! Most of these were 48 hour jams. I'll

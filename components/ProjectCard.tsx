@@ -31,7 +31,7 @@ export default function ProjectCard({
                 <table>
                     <tbody>
                         <tr>
-                            <td className="w-48 h-48">
+                            <td className="w-48 h-48 align-top pt-6">
                                 <Image
                                     // aria-hidden
                                     src={imgSrc}
