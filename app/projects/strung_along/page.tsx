@@ -23,7 +23,7 @@ export default function StrungAlong() {
                 <Tooltip
                     text="modifiers"
                     tooltip="A modifier is an additional restriction/feature that your game includes. Modifiers are completely optional!"
-                />
+                />{" "}
                 as possible. We ended up with 9 out of the 18 modifiers, the
                 most the any team included! The modifier that probably had the
                 largest impact on our game design was 'Name a better pair'
@@ -166,18 +166,16 @@ export default function StrungAlong() {
                 <li>Date originally completed: November 06, 2023</li>
             </ul>
             <Button
-                variant="itch"
+                colorScheme="itch"
                 href="https://trim-ge2019.itch.io/the-red-line-of-fate"
                 text="View on itch"
-                newTab="_blank"
             />
             <Button
-                variant="git"
+                colorScheme="git"
                 href="https://github.com/DragonGawain/CGJ2023"
                 text="View the source code"
-                newTab="_blank"
             />
-            <Button href="../" text="Return to Main" />
+            <Button href="../" text="Return to Main" newTab={false} />
         </div>
     );
 }

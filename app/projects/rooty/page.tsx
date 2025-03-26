@@ -59,18 +59,16 @@ export default function Rooty() {
                 <li>Date originally completed: February 06, 2023</li>
             </ul>
             <Button
-                variant="itch"
+                colorScheme="itch"
                 href="https://twistershadow.itch.io/rudys-adventures"
                 text="View on itch"
-                newTab="_blank"
             />
             <Button
-                variant="git"
+                colorScheme="git"
                 href="https://github.com/DragonGawain/RootBeerGameJame"
                 text="View the source code"
-                newTab="_blank"
             />
-            <Button href="../" text="Return to Main" />
+            <Button href="../" text="Return to Main" newTab={false} />
         </div>
     );
 }

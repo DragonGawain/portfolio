@@ -7,7 +7,7 @@ export default function GuardianGame() {
             <h1>Guardian Game</h1>
             <p>This is a page where I talk all about Guardian Game!</p>
             {/* not on itch and private repo */}
-            <Button href="../" text="Return to Main" />
+            <Button href="../" text="Return to Main" newTab={false} />
         </div>
     );
 }

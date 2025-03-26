@@ -17,7 +17,7 @@ export default function Tooltip({ text, tooltip }: TooltipProps) {
                 className="underline"
             >
                 {text}
-            </span>{" "}
+            </span>
             <span
                 className={`${isHover} absolute bg-black text-white dark:bg-white dark:text-black background-cover indent-0 p-1`}
             >

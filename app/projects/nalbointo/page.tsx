@@ -16,13 +16,12 @@ export default function Nalbointo() {
                 only me and one other person on the team. Nalbointo is a a
                 hexagonal grid based deterministic puzzle game with hefty
                 inspiration from{" "}
-                <a
+                <Button
+                    colorScheme="none"
+                    buttonType="inline"
                     href="https://caravelgames.com/Articles/Games.html"
-                    target="_blank"
-                    className="underline text-blue-800 hover:text-violet-800 visited:text-violet-900 dark:text-blue-500 dark:hover:text-fuchsia-700 dark:visited:text-fuchsia-800"
-                >
-                    DROD (Deadly Rooms Of Death)
-                </a>
+                    text="DROD (Deadly Rooms Of Death)"
+                />
                 . Both DROD and Nalbointo have the character wielding a Very
                 Large Sword. A turn is spent either moving to an adjecent cell,
                 or rotating, moving the sword into a different cell. Unlike
@@ -166,19 +165,17 @@ export default function Nalbointo() {
                 <li>Date originally completed: December 01, 2023</li>
             </ul>
             <Button
-                variant="itch"
+                colorScheme="itch"
                 href="https://dragongawain.itch.io/nalbointo-vs-the-hopocalypse"
                 text="View on itch"
-                newTab="_blank"
             />
             {/* repo is private */}
             {/* <Button
                 variant="git"
                 href="https://github.com/DragonGawain/376-project"
                 text="View the source code"
-                newTab="_blank"
             /> */}
-            <Button href="../" text="Return to Main" />
+            <Button href="../" text="Return to Main" newTab={false} />
         </div>
     );
 }

@@ -35,15 +35,15 @@ export default function FloorIsLava() {
                 that let you move to the left, you would be unable to. We had
                 three types of markers: basic movement,
                 <Tooltip
-                    text="wind,"
+                    text="wind"
                     tooltip="Wind would push the player in a defined direction every three turns."
                 />
-                and
+                , and
                 <Tooltip
-                    text="mimic."
+                    text="mimic"
                     tooltip="Mimic would spawn a second character that would move in the opposite direction that the player moved. If the mimic was unable to move in that direction, it simply didn't, resulting in the offset between the player and the mimic changing."
                 />
-                Each of the markers took up a different amount of space in the
+                . Each of the markers took up a different amount of space in the
                 inventory and would last as long as at least one space of the
                 inventory contained part of the marker.
             </p>
@@ -127,18 +127,16 @@ export default function FloorIsLava() {
                 <li>Date originally completed: September 22, 2024</li>
             </ul>
             <Button
-                variant="itch"
+                colorScheme="itch"
                 href="https://dragongawain.itch.io/the-floor-is-lava"
                 text="View on itch"
-                newTab="_blank"
             />
             <Button
-                variant="git"
+                colorScheme="git"
                 href="https://github.com/DragonGawain/creative-jam-2024"
                 text="View the source code"
-                newTab="_blank"
             />
-            <Button href="../" text="Return to Main" />
+            <Button href="../" text="Return to Main" newTab={false} />
         </div>
     );
 }

@@ -7,7 +7,7 @@ export default function EndlessRunner() {
             <h1>Endless Runner Game</h1>
             <p>This is a page where I talk all about Endless Runner Game!</p>
             {/* currently not on itch and the git repo is private */}
-            <Button href="../" text="Return to Main" />
+            <Button href="../" text="Return to Main" newTab={false} />
         </div>
     );
 }

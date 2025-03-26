@@ -84,12 +84,11 @@ export default function Minesweeper() {
                 <li>Date originally completed: January 17, 2024</li>
             </ul>
             <Button
-                variant="git"
+                colorScheme="git"
                 href="https://github.com/DragonGawain/Minesweeper"
                 text="View the source code"
-                newTab="_blank"
             />
-            <Button href="../" text="Return to Main" />
+            <Button href="../" text="Return to Main" newTab={false} />
         </div>
     );
 }
