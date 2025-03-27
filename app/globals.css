@@ -78,12 +78,12 @@ body {
     background-size: 100vw 100vh;
     background-attachment: fixed;
 }
-/* .bgStrungAlong {
+.bgStrungAlong {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(@/public/gifs/.gif) center center no-repeat;
+        url(@/public/gifs/strung_along.gif) center center no-repeat;
     background-size: 100vw 100vh;
     background-attachment: fixed;
-} */
+}
 /* .bgCheezyLunar {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url(@/public/gifs/.gif) center center no-repeat;

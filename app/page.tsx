@@ -63,7 +63,7 @@ export default function Home() {
                     projTitle="Strung Along"
                     projDesc="The next game jam I participated in was hosted by my university, Concordia. The theme of the Concordia Game Jam 2023 was 'The Space Between'. I spent the majority of this game jam programming a string that connected our two player characters. I also made the character controllers, and some other game mechanics. I wasn't as involved in the game design for this jam as I was too busy programming the string. November 06, 2023."
                     buttonRef="/projects/strung_along"
-                    bgClassName="bgA"
+                    bgClassName="bgStrungAlong"
                     imgSrc="/covers/strung_along_cover.png"
                     imgAltText="Strung Along"
                 />
