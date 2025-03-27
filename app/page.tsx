@@ -137,7 +137,7 @@ export default function Home() {
                 <ProjectCard
                     setBg={SetBg}
                     projTitle="Conway's Game Of Life"
-                    projDesc="Conway's Game Of Life is a simulation where 'cells' can be in an alive (white) state or dead (blue in my version) state. Cells become alive or dead based on four simple rules. I actually recreated Conway's Game Of Life twice, but my first version was so unoptimized that each generation was taking a significant amount of time, so I completely changed my approach and created a much smoother version. You can learn about the details of Conway's Game Of Life and my implementation adventures here!"
+                    projDesc="Conway's Game Of Life is a simulation where 'cells' can be in an alive (white) state or dead (blue in my version) state. Cells become alive or dead based on four simple rules. I actually recreated Conway's Game Of Life twice, but my first version was so unoptimized that each generation was taking a significant amount of time, so I completely changed my approach and created a much smoother version. You can learn about the details of Conway's Game Of Life and my implementation adventures here! October 6, 2024"
                     buttonRef="/projects/cgl"
                     bgClassName="bgCGL"
                     imgSrc="/covers/cgl_cover.png"

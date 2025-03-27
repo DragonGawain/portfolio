@@ -48,6 +48,8 @@ body {
     background: var(--background);
     color: var(--text-color);
     margin-left: 2em;
+    margin-right: 1.5em;
+    text-align: justify;
 }
 
 .bgDefault {
