@@ -84,12 +84,12 @@ body {
     background-size: 100vw 100vh;
     background-attachment: fixed;
 }
-/* .bgCheezyLunar {
+.bgCheezyLunar {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url(@/public/gifs/cheezyLunar.gif) center center no-repeat;
     background-size: 100vw 100vh;
     background-attachment: fixed;
-} */
+}
 .bgFloorIsLava {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url(@/public/gifs/floorIsLava.gif) center center no-repeat;

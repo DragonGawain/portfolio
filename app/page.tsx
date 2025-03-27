@@ -72,7 +72,7 @@ export default function Home() {
                     projTitle="Cheezy Lunar Defender"
                     projDesc="The Global Game Jam 2024 had the theme 'Make Me Laugh'. I was the lead programmer for this one, responsible for all of the actions the character could do, as well as how the projectiles behave. Jan 28, 2024."
                     buttonRef="/projects/cheezy_lunar"
-                    bgClassName="bgA"
+                    bgClassName="bgCheezyLunar"
                     imgSrc="/covers/cheezy_lunar_cover.png"
                     imgAltText="Cheezy Lunar"
                 />
