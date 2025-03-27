@@ -90,12 +90,12 @@ body {
     background-size: 100vw 100vh;
     background-attachment: fixed;
 } */
-/* .bgFloorIsLava {
+.bgFloorIsLava {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url(@/public/gifs/floorIsLava.gif) center center no-repeat;
     background-size: 100vw 100vh;
     background-attachment: fixed;
-} */
+}
 /* .bgOperationYJLTG {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url(@/public/gifs/operationYJLTG.gif) center center no-repeat;

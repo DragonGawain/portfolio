@@ -81,7 +81,7 @@ export default function Home() {
                     projTitle="THE: Floor is Lava"
                     projDesc="The Creative Jam 2024 hosted by NAD had the theme of 'Disappearing'. For this 46 hour jam, I sought out an inexperienced team with the goal of teaching them as much as I could. I lead the discussion on game design and was the lead programmer on the team, making the character controller and other key gameplay elements. September 22, 2024."
                     buttonRef="/projects/floor_is_lava"
-                    bgClassName="bgA"
+                    bgClassName="bgFloorIsLava"
                     imgSrc="/covers/floor_is_lava_cover.png"
                     imgAltText="The Floor Is Lava"
                 />
@@ -114,7 +114,7 @@ export default function Home() {
                     imgAltText="Nalbointo"
                 />
                 {/* not currently on itch */}
-                <ProjectCard
+                {/* <ProjectCard
                     setBg={SetBg}
                     projTitle="Endless runner"
                     projDesc=""
@@ -122,9 +122,9 @@ export default function Home() {
                     bgClassName="bgA"
                     imgSrc="/file.svg"
                     imgAltText="Endless runner"
-                />
+                /> */}
                 {/* not currently on itch */}
-                <ProjectCard
+                {/* <ProjectCard
                     setBg={SetBg}
                     projTitle="Guardian game"
                     projDesc=""
@@ -132,7 +132,7 @@ export default function Home() {
                     bgClassName="bgA"
                     imgSrc="/file.svg"
                     imgAltText="Guardian game"
-                />
+                /> */}
                 {/* not currently on itch */}
                 <ProjectCard
                     setBg={SetBg}
