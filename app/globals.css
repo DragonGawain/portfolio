@@ -86,43 +86,43 @@ body {
 }
 /* .bgCheezyLunar {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(@/public/gifs/.gif) center center no-repeat;
+        url(@/public/gifs/cheezyLunar.gif) center center no-repeat;
     background-size: 100vw 100vh;
     background-attachment: fixed;
 } */
 /* .bgFloorIsLava {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(@/public/gifs/.gif) center center no-repeat;
+        url(@/public/gifs/floorIsLava.gif) center center no-repeat;
     background-size: 100vw 100vh;
     background-attachment: fixed;
 } */
 /* .bgOperationYJLTG {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(@/public/gifs/.gif) center center no-repeat;
+        url(@/public/gifs/operationYJLTG.gif) center center no-repeat;
     background-size: 100vw 100vh;
     background-attachment: fixed;
 } */
 /* .bgGamelabs {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(@/public/gifs/.gif) center center no-repeat;
+    url(@/public/gifs/gamelabs.gif) center center no-repeat;
     background-size: 100vw 100vh;
     background-attachment: fixed;
     } */
-/* .bgNalbointo {
+.bgNalbointo {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(@/public/gifs/.gif) center center no-repeat;
+        url(@/public/gifs/nalbointo.gif) center center no-repeat;
     background-size: 100vw 100vh;
     background-attachment: fixed;
-} */
+}
 /* .bgEndlessRunner {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(@/public/gifs/.gif) center center no-repeat;
+        url(@/public/gifs/endlessRunner.gif) center center no-repeat;
     background-size: 100vw 100vh;
     background-attachment: fixed;
 } */
 /* .bgGuardianGame {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(@/public/gifs/.gif) center center no-repeat;
+        url(@/public/gifs/guardianGame.gif) center center no-repeat;
     background-size: 100vw 100vh;
     background-attachment: fixed;
 } */
@@ -134,7 +134,7 @@ body {
 }
 /* .bgCodingCards {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(@/public/gifs/.gif) center center no-repeat;
+        url(@/public/gifs/codingCards.gif) center center no-repeat;
     background-size: 100vw 100vh;
     background-attachment: fixed;
 } */

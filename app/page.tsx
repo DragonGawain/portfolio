@@ -109,7 +109,7 @@ export default function Home() {
                     projTitle="Nalbointo vs the Hopocalypse"
                     projDesc=""
                     buttonRef="/projects/nalbointo"
-                    bgClassName="bgA"
+                    bgClassName="bgNalbointo"
                     imgSrc="/covers/nalbointo_cover.png"
                     imgAltText="Nalbointo"
                 />
