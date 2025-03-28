@@ -118,7 +118,7 @@ export default function Home() {
                 <ProjectCard
                     setBg={SetBg}
                     projTitle="Apollo"
-                    projDesc="The theme of the Montreal Game Jam 2023 was 'Historical Event'. By this time, I was already a key member of the team. I played a large role in the character controller as well as other systems. I was also the creative director for this jam, gaining more experience with game and level design. April 30, 2023."
+                    projDesc="The theme of the Montreal Game Jam 2023 was 'Historical Event'. By this time, I was already a key member of the team. I made the interaction system, set up the hitboxes for most objects, as well as created the animation cutscenes that play at the end of the game. I was also the creative director for this jam, gaining more experience with game and level design. April 30, 2023."
                     buttonRef="/projects/apollo"
                     bgClassName="bgApollo"
                     imgSrc="/covers/apollo_cover.png"

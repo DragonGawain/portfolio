@@ -30,17 +30,23 @@ export default function Rooty() {
             <h2>My contribution</h2>
             <p>
                 I mainly worked on level design, starting from rough sketches to
-                in-editor prototypes. I also did some coding, working with
-                Cinemachine to set up a moving camera that would pan from the
-                goal to the player's starting position. Sadly, none of my work
-                made it into the published version of the game since our team of
-                excellent artists accidentally exported all the assets in 4K
-                resolution. Since there were a lot of assets in the game, it
-                suffered from hefty lag issues in my complicated level, so we
-                ended up using the testing level that our team lead had
-                designed. While very little of my work (outside of the game
-                concept) made it into the final published version, I still had a
-                lot of fun during this jam and learnt a lot!
+                in-editor prototypes. I also did some coding, working with{" "}
+                <Button
+                    text="cinemachine"
+                    href="https://docs.unity3d.com/Packages/com.unity.cinemachine@3.1/manual/index.html"
+                    colorScheme="none"
+                    buttonType="inline"
+                />{" "}
+                to set up a moving camera that would pan from the goal to the
+                player's starting position. Sadly, none of my work made it into
+                the published version of the game since our team of excellent
+                artists accidentally exported all the assets in 4K resolution.
+                Since there were a lot of assets in the game, it suffered from
+                hefty lag issues in my complicated level, so we ended up using
+                the testing level that our team lead had designed. While very
+                little of my work (outside of the game concept) made it into the
+                final published version, I still had a lot of fun during this
+                jam and learnt a lot!
             </p>
             <h2>Technical challenges</h2>
             <p>
