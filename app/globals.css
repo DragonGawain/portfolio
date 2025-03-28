@@ -68,7 +68,7 @@ body {
 
 .bgRooty {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(@/public/gifs/rooty.gif) center center no-repeat;
+        url(@/public/gifs/rooty2.gif) center center no-repeat;
     background-size: 100vw 100vh;
     background-attachment: fixed;
 }
