@@ -90,7 +90,7 @@ export default function Home() {
                     projTitle="Operation: YJLTG"
                     projDesc="Operation: YJLTG was made under the theme of 'Operation' for the Phantom Game Jam 2024 (hosted by Concordia). I once more sought out an inexperienced team so I could teach them as much as I could. This 7 day jam had an additional component of building a custom controller for the game. I once more lead the game design discussion and was programmed most of the game including the character controller, the enemy AI, biome specific effects, and more. I also did my best to teach my team as many of my skills that I could. October 20, 2024."
                     buttonRef="/projects/operation_yjltg"
-                    bgClassName="bgA"
+                    bgClassName="bgOperationYJLTG"
                     imgSrc="/covers/operation_yjltg_cover.png"
                     imgAltText="Operation yjltg"
                 />

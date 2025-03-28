@@ -96,12 +96,12 @@ body {
     background-size: 100vw 100vh;
     background-attachment: fixed;
 }
-/* .bgOperationYJLTG {
+.bgOperationYJLTG {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url(@/public/gifs/operationYJLTG.gif) center center no-repeat;
     background-size: 100vw 100vh;
     background-attachment: fixed;
-} */
+}
 /* .bgGamelabs {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(@/public/gifs/gamelabs.gif) center center no-repeat;
