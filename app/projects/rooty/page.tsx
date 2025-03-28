@@ -6,7 +6,7 @@ export default function Rooty() {
             <h1>Rooty's Adventures: Quest For The Root Beer Float</h1>
             <h2>Global Game Jam 2023: Roots</h2>
             <p>
-                GGJ2023 was the first game jam that I ever participated in. I
+                GGJ 2023 was the first game jam that I ever participated in. I
                 had long been interested in game dev and had dabbled with Unity
                 a bit years prior, but never got very far. GGJ 2023 changed
                 that. I had been about half way through univeristy at the time,
@@ -34,7 +34,7 @@ export default function Rooty() {
                 Cinemachine to set up a moving camera that would pan from the
                 goal to the player's starting position. Sadly, none of my work
                 made it into the published version of the game since our team of
-                excellent artists accudentally exported all the assets in 4K
+                excellent artists accidentally exported all the assets in 4K
                 resolution. Since there were a lot of assets in the game, it
                 suffered from hefty lag issues in my complicated level, so we
                 ended up using the testing level that our team lead had
