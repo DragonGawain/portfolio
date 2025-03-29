@@ -9,8 +9,8 @@ export default function CGL() {
             <p>
                 Conway's Game Of Life is a 0 player game played in a sqaure
                 grid. It simulates the life cycle of 'cells' based on four
-                simple rules. Conway's Game Of life does not consider diagonal
-                cells to be adjacent. The rules are as follows:
+                simple rules. Conway's Game Of life considers diagonal cells to
+                be adjacent. The rules are as follows:
             </p>
             <ol>
                 <li>
@@ -22,7 +22,7 @@ export default function CGL() {
                     next generation
                 </li>
                 <li>
-                    Any live cell with four live neighbours dies
+                    Any live cell with four or more live neighbours dies
                     (overpopulation)
                 </li>
                 <li>
@@ -36,7 +36,7 @@ export default function CGL() {
                 patterns that can emerge from the Game Of Life, but that's
                 outside of the scope of what I'll be talking about here. If
                 you're interested in learning more about Conway's Game Of Life
-                and the patterns that emerge, I'll defer you to{" "}
+                and the patterns that emerge, I'll refer you to{" "}
                 <Button
                     text="the wikipedia article about it"
                     href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life"
@@ -48,12 +48,12 @@ export default function CGL() {
             <h2>My recreation</h2>
             <p>
                 I created Conway's Game Of Life twice. My first attempt suffered
-                from massiv lag issues, so I redid the project to deal with the
+                from massive lag issues, so I redid the project to deal with the
                 lag issues. The entire project took me a total of three days.
             </p>
             <h3>The first attempt</h3>
             <p>
-                In my first attempt to creat the Game Of Life, I tried to use a
+                In my first attempt to create the Game Of Life, I tried to use a
                 tilemap. My idea was that I could maybe use{" "}
                 <Button
                     text="rule tiles"
@@ -61,8 +61,9 @@ export default function CGL() {
                     colorScheme="none"
                     buttonType="inline"
                 />
+                {/* TODO: add a page on my website about my custom tile system. Refer to that link here. */}
                 . Sadly, I wasn't able to get that to work, but I continued with
-                the tilemap method. By manually checking each tile in every
+                the tilemap method By manually checking each tile in every
                 generation, I toggled the state of the tiles (once more using my
                 custom data-holding tiles from my Minesweeper game) to be either
                 dead or alive. This suffered from a few issues. Firstly, the lag
@@ -84,16 +85,26 @@ export default function CGL() {
                 every generation, and the worse the lag became. A new design
                 philosophy was needed.
             </p>
+            <p>
+                In hindsight, looking back on this project now, six months after
+                its completion, using custom tiles is not needed. If I had
+                instead represented live cells by placing a tile at the
+                coordinates and dead cells by removing the tile, I could have
+                potentially fixed the lag issues. This representation would have
+                also solved the limited space issue as I would be placing and
+                removing tiles, not toggling the state of existing tiles. Alas,
+                I had not thought of this at the time, so I never tested it.
+            </p>
             <h3>The second attempt</h3>
             <p>
-                Upon realizing all the issues the tilemap method had, I changed
+                Upon realizing all the issues my tilemap method had, I changed
                 my tactic. I completely abandoned the idea of using a tilemap
                 and instead just created and deleted gameObjects that were white
                 squares. The position of each cell was locked to be a flat
                 integer to ensure that it was on the non-existant grid. This
                 time, I started tracking data as well. I track both all the live
                 cells, as well as all the cells that neighbour a live cell. With
-                this information, I can start calculatingwhat happens in each
+                this information, I can start calculating what happens in each
                 generation. I do this with the following steps:
             </p>
             <ol>
@@ -103,9 +114,11 @@ export default function CGL() {
                     it's added to a list.
                 </li>
                 <li>
-                    Second, I go through all the cells in the frontier (the
-                    neighbouring cells). If a cell is in the frontier exactly, a
-                    new cell is spawned in that location.
+                    Second, I go through all the cells in the frontier (the list
+                    of neighbouring cells) and count the number of times each
+                    cell is present. Once the counting is done, I go through the
+                    counted frontier and spawn a cell at every location that has
+                    exactly three neighbours.
                 </li>
                 <li>
                     The third step is to go through all the cells selected in
@@ -125,15 +138,18 @@ export default function CGL() {
                 </li>
             </ol>
             <p>
-                The end result works pretty well! There are further
-                optimizations that can be done, such as having a dying cell
-                decrementing the counter of second adjacent (two spaces away)
-                living cells by the appropriate amount, but I considered it
-                unnecessary as the current simulation does not suffer much lag.
-                I have noticed some lag if the population goes above 2000 and
-                there are large clusters of cells, but such large clusters tend
-                to break themselves down relatively quickly anyway, so it's not
-                a large concern.
+                While looking back at my code, I am once more slightly confused
+                at my implementation. Since the frontier is already a
+                dictionary, there should be no need to empty it and recount the
+                number of live neighbours that a frontier cell has every
+                generation. I could instead keep it as a running total. My code
+                already has a check to skip over live cells when counting, so
+                that would simply need to be applied to spawning - if a cell was
+                already alive, don't spawn a new cell on top of it. That being
+                said, the existing form works well enough. It only starts to
+                experience minor lag issues if the population goes above 2000
+                living cells and there is a cluster of cells in proximity to
+                each other.
             </p>
             <h2>Lessons I learnt</h2>
             <p>

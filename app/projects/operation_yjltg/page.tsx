@@ -11,18 +11,19 @@ export default function OperationYJLTG() {
                 This game jam was the second that I participated in with the
                 express intent of teaching others my game dev skills. The game
                 jam had an additional component where teams also had to make a
-                controller for their game. I was in a team of 6 people. One
-                person was dedicated to setting up the controller, one did the
-                music, one did the art, and the rest of us were programmers. I
-                found that it was much harder to teach my team my skills during
-                this jam. Since it lasted a whole week, the in person site was
-                not available the entire time. Instead, the in person site was
-                only available on the final two days of the jam. This made
-                personal interaction a lot harder. I also found that my
-                teammates didn't put in as much effort towards the jam, which
-                further limited my interaction with them. In the end, I was
-                somewhat disappointed with my goal of passing on knowledge, but
-                enjoyed the jam nonetheless.
+                custom controller for their game. I was in a team of 6 people.
+                One person was dedicated to setting up the controller, one did
+                the music, one did the art, and the rest of us were programmers.
+                I found that it was much harder to teach my team my skills
+                during this jam. Since it lasted a whole week, the in person
+                site was not available the entire time. Instead, the in person
+                site was only available on the final two days of the jam. This
+                made personal interaction a lot harder. I also found that my
+                teammates didn't put in as much effort towards the jam as I had
+                hoped they would, effectively meaning that my interactions with
+                them was lower than I had hoped. In the end, I was somewhat
+                disappointed with my goal of passing on knowledge, but enjoyed
+                the jam nonetheless.
             </p>
             <h2>About the game</h2>
             <p>
@@ -35,16 +36,16 @@ export default function OperationYJLTG() {
                 , gathering components to fix their space ship. In phase two,
                 the player had to survive the hoard of enemies that chased after
                 them. We had two distinct types of enemies, humans and aliens.
-                I'll talk more about them later as their AI is quite detailed.
                 Both the player and the human enemies have a ranged weapon that
                 they use to attack. The alien enemies only dealt contact damage.
             </p>
             <h2>My contribution</h2>
             <p>
-                I did the lions share of the programming for the game. Notably,
+                I did the lion's share of the programming for the game. Notably,
                 I created up the AI for the enemies, the character controller,
-                the inventory system, and the biome effects (the biomes my
-                teammates helped with).
+                the inventory system, and the biome effects (my teammates did
+                help with the biomes, as well as other portions of the code that
+                I'm not mentioning).
             </p>
             <h2>Technical challenges</h2>
             <h3>AI</h3>
