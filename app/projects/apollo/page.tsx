@@ -60,15 +60,53 @@ export default function Apollo() {
             </p>
             <h3>Animations</h3>
             <p>
-                Using
+                The game has two cinematics for the two possible endings. To set
+                these up, I used the particle system as well as
                 <Button
                     text="cinemachine"
                     href="https://docs.unity3d.com/Packages/com.unity.cinemachine@3.1/manual/index.html"
                     colorScheme="none"
                     buttonType="inline"
                 />{" "}
+                for camera panning. Once more, with my current knowledge, these
+                would be trivial to set up, but they were quite a feat back
+                then. The animations were set to run when loaded, so to choose
+                the animation that played, we loaded into a different scene. For
+                the animation itself, Cinemachine controlled the camera to track
+                the rocket. The rocket thrusters were created with the particle
+                system, and the rocket's position was altered smoothly via the
+                animation controller. In the bad ending, the particle system was
+                employed once more to create an explosion effect. While hiddin
+                within the explosion, the rocket prefab was deleted to make it
+                appear as though the rocket ship had been blown up. The
+                explosion delay was set using the delay property of the particle
+                system. The good ending was functionally the same as the bad
+                ending, except that the ship did not blow up. After the good
+                ending animation, a fourth scene was loaded in to display the
+                second half of the good ending where a small lander landed on
+                the moon. If I were to recreate this with my current knowledge,
+                I wouldn't use so many different scenes. The first half of the
+                good ending is so similar to the bad ending that they could be
+                in the same scene with just some variable toggles. Having the
+                moon landing cinematic be in a scene of its own is also
+                unnecessary. I would most likely enable and disable large parent
+                objects that contain the complete cinematics within them. The
+                same would apply to the game world - if it was all put as
+                children of a single game object that could be easily disabled,
+                we could completely turn off the playable part of the game.
+                Since the rocket prefab is the same in the game and in the
+                cinematics, we could even just reuse that prefab and not need to
+                have two (good and bad ending would use the same one anyway)
+                copies of it in the scene.
             </p>
-
+            <h2>Final thoughts</h2>
+            <p>
+                I had very little experience during this jam, and it shows when
+                I look back on it and see how it was made. That being said,
+                participating in game jams and creating an internally poor but
+                functioning game is a huge part of learning and it was a
+                necessary step to become as skilled as I am today.
+            </p>
             <h3>Technical details overview</h3>
             <ul>
                 <li>Unity version 2021.3.18f1</li>
