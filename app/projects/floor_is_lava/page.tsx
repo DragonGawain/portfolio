@@ -20,7 +20,7 @@ export default function FloorIsLava() {
                 knowledge, as well as try to coach them whenever they got too
                 stuck. Overall, I think it was a good experience for everyone.
                 The entire team gave me positive feedback and told me that I did
-                a good job.
+                a good job as well, which gave me further confidence.
             </p>
             <h2>About the game</h2>
             <p>
@@ -81,7 +81,9 @@ export default function FloorIsLava() {
             <h2>Bugs</h2>
             <p>
                 The current version of the game has a lot of bugs, so I feel I
-                need to make a dedicated section to talk about them. <br />
+                need to make a dedicated section to talk about them.
+            </p>
+            <p>
                 The character isn't correctly tied to the tilemap. This has to
                 do with using the animations to move the character. Since the
                 animation itself moves the character a bit (the player in the
@@ -100,14 +102,16 @@ export default function FloorIsLava() {
                 too large. Of course fixing the art asset so that the final
                 frame lines the character up to be in the same position as the
                 initial frame would also fix the issue.
-                <br />
+            </p>
+            <p>
                 Another issue is that the inventory queue is larger visually
                 than it is in actuality. This one would be pretty simple to
                 solve. It would only require a check to see how many inventory
                 slots are available in that level and only show a number of
                 slots equal to the number available. This ties in with the next
                 bug.
-                <br />
+            </p>
+            <p>
                 Possibly the largest issue is that the game does not reset
                 properly. Following up on the previous issue, if at every level
                 reset everything was reset properly, then every time a level is
@@ -116,6 +120,22 @@ export default function FloorIsLava() {
                 fundamenetally a matter of restoring the game state to how it
                 was originally, so it's a matter of cleaning up gameobjects and
                 resetting variable values.
+            </p>
+            <h2>FInal thoughts</h2>
+            <p>
+                Despite the final product being a bug ridden mess, that's OK.
+                Game jams are a place where failure is epected and encouraged.
+                They are a place where people should feel comfortable showing a
+                messy, incomplete, bug ridden project to others. What is
+                important is if the creators had fun and learnt new things. In
+                that sense, this jam was an absolute success. I certainly had a
+                good time and I learnt a lot, both about how to teach others my
+                knowledge, as well as simply improving my skills. Another
+                important lesson that I learnt is that nothing is perfect. For
+                example, my custom tilemap system was a bad fit for this game.
+                It was difficult to force the correct features into it, though
+                we did manage in the end. Overall, this jam was a great time and
+                I am proud to say that I had a part in making this game!
             </p>
             <h3>Technical details overview</h3>
             <ul>

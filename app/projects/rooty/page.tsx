@@ -48,13 +48,41 @@ export default function Rooty() {
                 final published version, I still had a lot of fun during this
                 jam and learnt a lot!
             </p>
-            <h2>Technical challenges</h2>
+            <h2>Technical details</h2>
             <p>
                 There's not much to say here for this one. This jam was mostly a
                 learning experience for me. I struggled just navigating the
                 unity UI at the start. The jam was difficult in general due to
                 my lack of knowledge, but I gave it my all and learnt a lot!
+                This jam was a few years ago at the time that I'm writing this,
+                but I'll still try to compile a list of what I learnt:
             </p>
+            <ul>
+                <li>
+                    How to navigate the Unity Editor (the hierarchy tab , the
+                    inspector tab, etc. Also shortcuts, such as F to zoom
+                    in/focus on the selected gameObject).
+                </li>
+                <li>
+                    How to manipulate objects in the editor (mainly dealing with
+                    the transform component, so position, rotation, and scale,
+                    as well as the color of objects).
+                </li>
+                <li>How to output information in the console.</li>
+                <li>
+                    How to make the unity editor have a different color tint
+                    when in play mode. This is useful because you cannot edit a
+                    scene when the game is playing, so it's a omnipresent visual
+                    reminder that no edits you make will be permanent.
+                </li>
+                <li>
+                    How to instantiate a prefab from a script. (This is where I
+                    got stuck when I tried to teach myself Unity years prior to
+                    this jam).
+                </li>
+                <li>Don't overscope projects</li>
+                <li>And a lot of other information!</li>
+            </ul>
             <h3>Technical details overview</h3>
             <ul>
                 <li>Unity version 2021.3.13f1</li>

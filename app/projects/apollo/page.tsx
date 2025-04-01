@@ -61,7 +61,7 @@ export default function Apollo() {
             <h3>Animations</h3>
             <p>
                 The game has two cinematics for the two possible endings. To set
-                these up, I used the particle system as well as
+                these up, I used the particle system as well as{" "}
                 <Button
                     text="cinemachine"
                     href="https://docs.unity3d.com/Packages/com.unity.cinemachine@3.1/manual/index.html"

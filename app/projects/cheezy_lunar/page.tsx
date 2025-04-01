@@ -26,24 +26,23 @@ export default function CheezyLunar() {
                 the character controller for this game. Other than that, I also
                 designed the cannons that detect and shoot at enemies.
             </p>
-            <h2>Technical challenges</h2>
-            <p>
-                I didn't really have trouble with any of my tasks for this jam,
-                so this will more be a detailed examination of my contributions.
-            </p>
+            <h2>Technical details</h2>
             <h3>Cannons</h3>
             <p>
                 The cannons were probably the most technically difficult part
                 that I was in charge of. The difficult part of the cannons was
                 making it so that the sprite rotated from the base. The trick
-                was fairly simple - I changed the anchor point of the sprite to
-                be at the base so when I rotated the transform, it rotated from
-                the base instead of from the middle of the cannon. The actual
-                functional part was fairly easy - the cannon rotates around a
-                point, casting a ray in a straight line. If the ray encountered
-                an enemy, the cannon shot (if it had ammo), and then entered a
-                cooldown phase. Once the cooldown was done, it would be able to
-                shoot again.
+                was fairly simple - I changed the anchor point of the gameObject
+                to be at the base so when I rotated the transform, it rotated
+                from the base instead of from the middle of the cannon. The
+                actual functional part was fairly easy - the cannon rotates back
+                and forth, casting a ray in a straight line outwards. If the ray
+                encounters an enemy, the cannon shoots (if it has ammo), and
+                then enters a cooldown phase. Once the cooldown is done, it's
+                able to shoot again. The ray is also set to only detect enemies
+                through the use of physics layers. In Unity, making ray casts
+                only interact with a particular layer is a built-in
+                functionality.
             </p>
             <h3>Character controller</h3>
             <p>
@@ -52,20 +51,28 @@ export default function CheezyLunar() {
                 have a trigger box. If the player is within the trigger box,
                 it's able to perform the respective action. We made certain that
                 the player could not be in multiple trigger boxes at the same
-                time to avoid issues. There are also checks to ensure that you
-                could only load a cannon with the type of resource that it
+                time by placing the cannons/resources a certain minimum distance
+                away from each other. This made the code simpler to write and
+                avoided potential issues. There are also checks to ensure that
+                you could only load a cannon with the type of resource that it
                 requires and that the player could only have 1 type of resource
-                in their inventory at a time.
+                in their inventory at a time. Those checks were done with a
+                simple IF statement - if the type of cheese the player was
+                holding matched, the action could be performed. When the player
+                was not holding any cheese, the type represented this, allowing
+                the player to mine any type of cheese. The type of cheese is
+                stored as an enum.
             </p>
             <h3>Resource deposits</h3>
             <p>
-                Each resource deposit had a customizable maximum amount that
-                they could hold. I also made it so that they refresh (regain
+                Each resource deposit has a customizable maximum amount that
+                they can hold. I also made it so that they refresh (regain
                 resources and potentially change type of resource) after a
-                customizable number of waves were cleared. When the enemies got
-                to a resource deposit, they would reduce the number of resources
-                it currently had in stock. If the number of available resources
-                dropped below 0, the resource deposit disappeared.
+                customizable number of waves are cleared. The custom values are
+                set in the Unity editor with the use of serialized fields. When
+                the enemies get to a resource deposit, they reduce the number of
+                resources it currently has in stock. If the number of available
+                resources drops below 0, the resource deposit is destroyed.
             </p>
             <h2>Final thoughts</h2>
             <p>

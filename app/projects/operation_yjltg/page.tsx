@@ -47,21 +47,22 @@ export default function OperationYJLTG() {
                 help with the biomes, as well as other portions of the code that
                 I'm not mentioning).
             </p>
-            <h2>Technical challenges</h2>
+            <h2>Technical details</h2>
             <h3>AI</h3>
             <p>
                 I spent a lot of the jam time setting up the AI. The aliens and
                 humans both have distinct AI, so I'll go over both of them.
                 However, both enemies use the same core which I'll go over now.
-                Enemies have two state controlers, one for movement, the other
+                Enemies have two state controllers, one for movement, the other
                 for combat. Each of these state controllers have substates that
                 are described in an enum (so there's a total of two enums). The
                 combat state controls what the enemy is doing at any given time.
                 It has more general substates such as WANDER, ATTACK, and FLEE.
-                The movement state controls <i>how</i> an enemy moves towards a
-                target. For example, if an enemy tries to move in a straight
-                line and there is a wall in the way, the movement state will
-                tell the enemy to rotate to avoid getting stuck on the wall.
+                The movement state controls <i>how</i> an enemy moves. For
+                example, if an enemy tries to move in a straight line and there
+                is a wall in the way, the movement state will tell the enemy to
+                rotate, allowing it to move around the wall instead of getting
+                stuck on it.
             </p>
             <p>
                 Enemies use a vision system based on raycasts. In my experience,
@@ -79,37 +80,38 @@ export default function OperationYJLTG() {
                 The human enemies have a similar behavior to the player. The run
                 around the map collecting ship components and bringing them to
                 their ship. Whenever a human got too close to another enemy,
-                they would initiate combat. When a human was in combat mode, it
+                they would initiate combat. When a human is in combat mode, it
                 will chase the target until it gets within a certain range. Once
                 it gets close enough, it begins circling the target, randomly
                 changing the direction that it circles. The random direction
                 change both made them more interesting, and made it so that two
-                humans wouldn't be locked in eternal combat with each other.
-                Humans have two other key features. If their ship is attacked,
-                they will immediately return to the ship to defend it. Lastly,
-                if a human got too low on HP, they would seek out a medkit which
-                restores some HP.
+                humans wouldn't be locked in eternal combat with each other. The
+                human would also begin periodically shooting its gun at the
+                target. Humans have two other key features. If their ship is
+                attacked, they will immediately return to the ship to defend it.
+                Lastly, if a human got too low on HP, they would seek out a
+                medkit, which restores some HP.
             </p>
             <h4>Alien enemies</h4>
             <p>
-                Alien enemies spawned around alien bases. Alien bases would
-                spawn aliens up to a maximum of 10. Once the number of aliens
+                Alien enemies spawned around alien bases. Alien bases spawn up
+                to a maximum of 10 aliens (per base). Once the number of aliens
                 that belong that that base drops below 5, it would resume
                 spawning. The aliens themselves would use a WANDER movement
-                patter to wander around the base. If the player or a human got
+                pattern to wander around the base. If the player or a human got
                 too close to the base, attacked any of the aliens, or attacked
                 the base, all the aliens would chase after the target. If the
                 target managed to get a certain distance away from the alien
                 base, they would give up chase. However, the aliens would also
-                give chance for a minimum of 30 seconds so that players couldn't
+                give chase for a minimum of 30 seconds so that players couldn't
                 remove alien aggro instantly and freely attack them. The aliens
-                were also able to handle multiple targets - if the base/the
-                aliens were attacked by multiple targets, each individual alien
-                would randomly choose a single target to chase after. This made
-                the aliens feel much more natural. For example, if the player
-                and a human enemy both triggered the same alien base, but then
-                the human enemy got away, all the aliens that were chasing the
-                human enemy would shift focus to the player.
+                were also able to handle multiple targets - if the base/aliens
+                were attacked by multiple targets, each individual alien would
+                randomly choose a single target to chase after. This made the
+                aliens feel much more natural. For example, if the player and a
+                human enemy both triggered the same alien base, but then the
+                human enemy got away, all the aliens that were chasing the human
+                enemy would shift focus to the player.
             </p>
             <p>
                 All in all, I'm quite pleased with how the AI turned out. It
@@ -159,7 +161,7 @@ export default function OperationYJLTG() {
                 faster while in it. The asphalt biome features a higher density
                 of human enemies and a lower density of aliens. In the center of
                 the asphalt biome, the player will find an improved gun which
-                shoots fast, more damaging bullets.
+                shoots faster, more damaging bullets.
             </p>
             <h4>Swamp</h4>
             <p>

@@ -21,7 +21,7 @@ export default function Minesweeper() {
                 as for the text font that I'm using. The entire project took me
                 about 1 weekend.
             </p>
-            <h2>Technical challenges</h2>
+            <h2>Technical challenges/details</h2>
             <p>
                 The project as a whole was relatively simple, but I faced a few
                 major complications:
@@ -74,19 +74,19 @@ export default function Minesweeper() {
                 two mines. I also decided that all the cells adjacent to the
                 initial cell should not contain a mine. Ensuring that the
                 initial cells could not contain mines was easy, I simply had to
-                open the cells before placing the mines. The challenge was
-                dealing with the possibility of two mines being placed in the
-                same cell. I used UnityEngine.Random.Range to select the cells
-                randomly, so it would not have been easy to alter the
-                randomizer. Instead, every time it attempted to place a mine, I
-                checked if it was a legal spot. If it was, I incremented a
-                counter and set the unique data of that cell to be a mine. After
-                attempting to place all the mines needed, I check to see if they
-                have all been placed. If all mines are placed, then the game
-                state shifts and the player can start playing. If not all the
-                mines have been placed, then I attempt to generate as many mines
-                that still need to be placed. This process continues until all
-                mines have been placed.
+                open the cells before placing the mines (mines can only be
+                placed in closed cells). The challenge was dealing with the
+                possibility of two mines being placed in the same cell. I used
+                UnityEngine.Random.Range to select the cells randomly, so it
+                would not have been easy to alter the randomizer. Instead, every
+                time it attempted to place a mine, I checked if it was a legal
+                spot. If it was, I incremented a counter and set the unique data
+                of that cell to be a mine. After attempting to place all the
+                mines needed, I check to see if they have all been placed. If
+                all mines are placed, then the game state shifts and the player
+                can start playing. If not all the mines have been placed, then I
+                attempt to generate as many mines that still need to be placed.
+                This process continues until all mines have been placed.
             </p>
             <h2>Final thoughts</h2>
             <p>

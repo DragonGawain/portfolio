@@ -6,6 +6,8 @@ interface TooltipProps {
     tooltip: string;
 }
 
+// TODO:: if a tooltip is on the far right of the screen, it should show up to the left.
+// I can't hard define this since the position of text changes based on resolution and window size.
 export default function Tooltip({ text, tooltip }: TooltipProps) {
     const [isHover, SetIsHover] = useState("invisible");
     return (

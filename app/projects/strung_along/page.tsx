@@ -8,13 +8,14 @@ export default function StrungAlong() {
             <h2>Concordia Game Jam 2023: The Space Between</h2>
             <p>
                 This was the third game jam I participated in. By this point, my
-                skills with Unity were pretty well established. I was also
+                skills with Unity were developped to the point that I could be
+                assigned major tasks that the game depended on. I was also
                 continuing my trend of being very involved with game design
                 discussion we held at the start of the jam. As it's been around
-                17 months since this jam, I don't recall how much of the game
-                concept I came up with. I do recall that I was still refining my
-                game design skills and that it was a group effort to arrive at
-                our final design though.
+                17 months since this jam at the time that I'm writing this, I
+                don't recall how much of the game concept I came up with. I do
+                recall that I was still refining my game design skills and that
+                it was a group effort to arrive at our final design though.
             </p>
             <h2>About the game</h2>
             <p>
@@ -26,11 +27,16 @@ export default function StrungAlong() {
                 />{" "}
                 as possible. We ended up with 9 out of the 18 modifiers, the
                 most the any team included! The modifier that probably had the
-                largest impact on our game design was 'Name a better pair'
-                (include a cooperative aspect). Our game concept settled into
-                being a 2 player couch-coop game where the two characters were
-                connected via a string. The string represented the space between
-                the two characters and was our interpretation of the theme.
+                largest impact on our game design was 'Name a better pair',
+                which had us 'include a cooperative aspect' in the game. Our
+                game concept settled into being a 2 player
+                <Tooltip
+                    text="couch-coop"
+                    tooltip="A couch-coop game is a cooperative game where players are expected to be in the same physical location, such as sitting next to each other on a couch, while playing the game. In the case of this game, the standard keyboard control scheme has both players using the same keyboard."
+                />{" "}
+                game where the player two characters were connected via a
+                string. The string represented the space between the two
+                characters and was our interpretation of the theme.
             </p>
             <h2>My contribution</h2>
             <p>
@@ -70,63 +76,131 @@ export default function StrungAlong() {
                 after it. However, since there was a player on both ends of the
                 string, it meant that the string could be pulled from either
                 direction, as well as from both directions at the same time.
-                This caused a lot of difficulties.
+                This caused a lot of difficulties. In the end, I made different
+                logic for different situations. In the simplest case, neither
+                player is moving, in which case no string logic needs to be
+                computed. The other cases are if exactly one of the players is
+                moving (it matters which character is the one moving, but the
+                underlying logic is identical), or if both players are moving
+                simulataneously. The basic functionalities that the string
+                needed were:
             </p>
-            <h3>String logic: one player moves</h3>
+            <ol>
+                <li>Don't stretch if pulled apart</li>
+                <li>
+                    Either player could pull the other if the string was taut
+                    (this includes a player being suspended if the other player
+                    was on a high platform)
+                </li>
+                <li>The string must be affected by gravity</li>
+                <li>
+                    the string must interact with some platforms (allowing the
+                    string alone to suspend both players) but not others
+                </li>
+                <li>
+                    We also had an additional abiity that allowed players to
+                    swap their locations. This also meant that the players
+                    change which end of the string that they are on.
+                </li>
+            </ol>
+            <h3>How it's built: the nodes</h3>
             <p>
-                Having the string attatched to both of the players meant that I
-                had to do both a forwards and backwards pass to ensure that the
-                string couldn't stretch and could pull the other player along.
-                This led me to make different logic for three distinct
-                scenarios: only player 1 (the cat) was moving, only player 2
-                (the rabbit) was moving, both players were moving. The simpler
-                case was when only one of the two players was moving. In this
-                situation, I'd do a forwards pass, pulling at each node in order
-                towards the player that moved if the distance between the node
-                and the previous checked node was greater than the max distance.
-                This generated the pulling effect, while also making it so that
-                the string could have slack. Only the taut nodes needed to be
-                moved. At the end of the string, if the second player was too
-                far away from the node closest to it, its velocity would be
-                influenced to pull it towards the node, and therefore the other
-                player. After the second player was checked, a backwards pass
-                was performed, making sure that all the nodes from the second
-                player to the first were close enough together. Since each node
-                could only be moved a certain amount each check (to prevent all
-                the nodes from being in the same spot), this helped give the
-                string some 'weight'. It also had the unintended effect of
-                making it so that when one player pulled the other, the moving
-                player was sometimes pulled back.
+                As mentioned before, the string is an ordered list of 21 nodes.
+                The number of nodes was experimentally determined, defined by
+                how long we wanted the string to be. Most nodes are not affected
+                by gravity. This was to make the string simpler, and helped deal
+                with the issues gravity was causing. Instead, only the center
+                node is affected by gravity. This is string logic case 0:
+                neither player is moving. In this case, the center node, pulled
+                down by gravity, pulls the nodes on either side of it closer to
+                itself, causing the string as a whole to fall. To move the
+                string nodes, I used{" "}
+                <Button
+                    text="Vector3.MoveTowards"
+                    href="https://docs.unity3d.com/2021.3/Documentation/ScriptReference/Vector3.MoveTowards.html"
+                    colorScheme="none"
+                    buttonType="inline"
+                />
+                . In order to display the string visually, I used a{" "}
+                <Button
+                    text="line renderer"
+                    href="https://docs.unity3d.com/2021.3/Documentation/ScriptReference/LineRenderer.html"
+                    colorScheme="none"
+                    buttonType="inline"
+                />{" "}
+                and defined each point on the line to be one of the nodes of the
+                string. The line renderer also had points for the two players.
             </p>
-            <h3>String logic: both players are moving</h3>
+            <h3>String logic case 1: one player is moving</h3>
             <p>
-                The case where both players were moving simultaneously was more
-                complicated. Upon reviewing my code, the string pulled towards
-                the center, with the center node being pulled towards one of the
-                two players. The center node changed which player was dominant
-                every fixed update frame (which is where the movement logic was
-                being called from). After the string pulled towards the center,
-                the second half of the half double pass was performed on each
-                side, pulling the nodes up to, but not including, the center
-                node towards the respective closer player. This mostly created
-                the intended behaviour of neither character being able to move
-                very well. Since the cat player did have a dash ability though,
-                they were able to pull the rabbit better. Also since air physics
-                are different than ground physics, if a character was mid air,
-                it was slightly easier to pull on them.
+                In this situation, I start by doing a forwards pass (from the
+                player that moved to the player that is stationary), pulling
+                each node in order closer to the player that moved if the
+                distance between the node and the previous checked node is
+                greater than the maximum distance. For the node closest to the
+                moving player, it checks the distance between itself and the
+                player. After all nodes are checked, the distance between the
+                stationary player and the final node is checked, pulling the
+                stationary player if needed. Unlike nodes, I additively alter
+                the Rigidbody.velocity field to pull the player. This generates
+                the pulling effect, while also making it so that the string
+                could have slack. Only the
+                <Tooltip
+                    text="taut"
+                    tooltip="Taut in this case meaning nodes whose distance to their neighbor has exceeded the defined maximum distance."
+                />{" "}
+                nodes are moved. After the second player is checked, a backwards
+                pass is performed, making sure that all the nodes from the
+                stationary player to the moving player are close enough
+                together. Since each node can only be moved a certain amount
+                each time it is checked (to prevent all the nodes from bunching
+                up together), this helped give the string some 'weight'.
+            </p>
+            <h3>String logic case 2: both players are moving</h3>
+            <p>
+                The case where both players are moving simultaneously is more
+                complicated. Upon reviewing my code, the string pulls towards
+                the center, pulling the players along with it. The center node
+                is pulled towards one of the two players, alternating every
+                fixed update frame (which is where the movement logic was being
+                called from). This made it so that the string could not stretch
+                much, even if the players are moving away from each other. After
+                the string pulls towards the center, the second half of the half
+                double pass is performed on each side, pulling the nodes from,
+                but not including, the center node towards the respective closer
+                player. This mostly created the intended behaviour of neither
+                character being able to move very well. The point of the second
+                half of the half double pass is to accommodote for cases where
+                the string gets stretched. It allows for the string to close
+                itself by pulling on the players. All together, it pulls both
+                players closer to the center, then allows the string itself to
+                shift a bit closer to the player that is further away. A
+                consistent way to stretch the string is the cat player's dash
+                ability though. This forcibly gave the cat a burst of speed,
+                allowing it to stretch the string a bit. The end result is that
+                the rabbit player is, slowly, pulled towards the cat player. The
+                moment either player stops moving, the single player (or 0
+                player) string logic kicks in and immediately fixes the string,
+                bringing it back to its intended maximum length and pulling both
+                players towards the center. Using the cat's dash ability is the
+                only way that I can currently think of that stretches the
+                string.
             </p>
             <h3>String gravity and interaction</h3>
             <p>
-                This challenge was amongst the easiest to solve once the base
-                string was set up. In order to make the string perform better, I
+                Making the string be affected by gravity is something I touched
+                on earlier. In order to make the string perform better, I
                 decided that only the central node would be affected by gravity.
                 This had the intended effect of pulling the entire string down.
                 While this made it so that some nodes could float, the string
                 was short enough that this wasn't much of an issue. In the end,
-                this decision made the string perform better.
+                this decision made the string perform better. Also, since that
+                was a game jam submission, time was of the essence and I was
+                very willing to make the sacrifice of allowing some nodes to
+                float for the trade off of having a higher functioning string.
             </p>
             <p>
-                Setting up conditional collisions was very simple. We used
+                Setting up conditional collisions was very simple. I used
                 physics layers so that the string simply would not interact with
                 some walls/floors. We used physics layers for the walls/floors
                 that only one player could pass through as well.
