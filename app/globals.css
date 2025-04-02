@@ -59,12 +59,12 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.bgA {
+/* .bgA {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url(@/public/gifs/celeste_summit_win_gif.gif) center center no-repeat;
     background-size: 100vw 100vh;
     background-attachment: fixed;
-}
+} */
 
 .bgRooty {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -132,12 +132,12 @@ body {
     background-size: 100vw 100vh;
     background-attachment: fixed;
 }
-/* .bgCodingCards {
+.bgCodingCards {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url(@/public/gifs/codingCards.gif) center center no-repeat;
     background-size: 100vw 100vh;
     background-attachment: fixed;
-} */
+}
 .bgMinesweeper {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url(@/public/gifs/minesweeper.gif) center center no-repeat;

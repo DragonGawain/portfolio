@@ -53,9 +53,9 @@ export default function Home() {
                 <ProjectCard
                     setBg={SetBg}
                     projTitle="Coding Cards"
-                    projDesc="Coding cards is a roguelike deckbuilder where the cards have lines of code. It's currently my main project! February 11, 2025 (still in progress)"
+                    projDesc="Coding cards is a roguelike deckbuilder where the cards have lines of code. It's currently my main project! In this solo project, I've implemented a lot of unique systems. The heart of the entire game is an interpreter that I wrote that can break down and execute the lines of code on the cards. Thanks to my interpreter, it is not much of an exageration to say that I have created my very own, albeit very limited, programming language within C#. February 11, 2025 (still in progress)"
                     buttonRef="/projects/coding_cards"
-                    bgClassName="bgA"
+                    bgClassName="bgCodingCards"
                     imgSrc="/covers/coding_cards_cover1.png"
                     imgAltText="Coding Cards"
                 />
