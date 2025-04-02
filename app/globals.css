@@ -30,16 +30,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.someCustomClass {
-    background: #61d0f0;
-    color: greenyellow;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    background: var(--bgURLB);
-    background-size: cover;
-    /* background-size: 100vw 100vh; */
-}
-
 .opacityOverride {
     opacity: 1 !important;
 }

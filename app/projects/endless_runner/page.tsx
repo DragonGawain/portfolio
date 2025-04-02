@@ -1,5 +1,4 @@
 import Button from "@/components/ui/Button";
-import PageBase from "@/components/ui/PageBase";
 
 export default function EndlessRunner() {
     return (
