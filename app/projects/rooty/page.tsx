@@ -102,7 +102,7 @@ export default function Rooty() {
                 href="https://github.com/DragonGawain/RootBeerGameJame"
                 text="View the source code"
             />
-            <Button href="../" text="Return to Main" newTab={false} />
+            <Button href="../" text="Return to Main Menu" newTab={false} />
         </div>
     );
 }

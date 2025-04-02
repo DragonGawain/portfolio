@@ -218,7 +218,7 @@ export default function OperationYJLTG() {
                 href="https://github.com/DragonGawain/phantom_game_jam"
                 text="View the source code"
             />
-            <Button href="../" text="Return to Main" newTab={false} />
+            <Button href="../" text="Return to Main Menu" newTab={false} />
         </div>
     );
 }

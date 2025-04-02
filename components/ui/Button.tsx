@@ -4,9 +4,10 @@ const buttonVariants = cva("", {
     variants: {
         colorScheme: {
             default:
-                "bg-[#0a0a0a] dark:bg-[#ededed] hover:bg-[#383838] dark:hover:bg-[#cccccc] text-[#fefefe] dark:text-[#171717] hover:text-[#fefefe] dark:hover:text-[#171717]",
-            git: "bg-[#0a0a0a] dark:bg-[#ededed] hover:bg-[#383838] dark:hover:bg-[#cccccc] text-[#fefefe] dark:text-[#171717] hover:text-[#fefefe] dark:hover:text-[#171717]",
-            itch: "bg-[#ff7878] dark:bg-[#7f1a1a] hover:bg-[#ff8e8e] dark:hover:bg-[#5c0f0f] text-[#171717] dark:text-[#fefefe] hover:text-[#171717] dark:hover:text-[#fefefe]",
+                "dark:bg-[#ededed] dark:hover:bg-[#cccccc] dark:text-[#171717] dark:hover:text-[#171717] bg-[#0a0a0a] hover:bg-[#383838] text-[#fefefe] hover:text-[#fefefe]",
+            git: "dark:bg-[#ededed] dark:hover:bg-[#cccccc] dark:text-[#171717] dark:hover:text-[#171717] bg-[#0a0a0a] hover:bg-[#383838] text-[#fefefe] hover:text-[#fefefe]",
+            itch: "dark:bg-[#7f1a1a] dark:hover:bg-[#5c0f0f] dark:text-[#fefefe] dark:hover:text-[#fefefe] bg-[#ff7878] hover:bg-[#ff8e8e] text-[#171717] hover:text-[#171717]",
+            blue: "dark:bg-[#61d0f0] dark:hover:bg-[#5cb7d1] dark:text-[#171717] dark:hover:text-[#171717] bg-[#0e1981] hover:bg-[#232f9e] text-[#fefefe] hover:text-[#fefefe] ",
             none: "",
         },
         buttonType: {

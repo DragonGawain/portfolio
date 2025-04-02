@@ -43,7 +43,7 @@ export default function Home() {
                 <ProjectCard
                     setBg={SetBg}
                     projTitle="About me"
-                    projDesc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    projDesc="Hi! I'm Craig Kogan, a Software Engineer from Montreal, Canada. I've been interested in game dev for a long time, so I learnt how to make games. You can learn more about me by clicking on this box, or you can look at any of my projects by clicking on them. I talk in detail about what my contribution to each project was, as well as some implementation details. Most of the projects on my website also have a live itch.io page where you can play the game, as well as a link to the open-source github repo."
                     buttonRef="/about_me"
                     bgClassName="bgDefault"
                     imgSrc="/covers/transparent.png"

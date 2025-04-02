@@ -249,7 +249,7 @@ export default function StrungAlong() {
                 href="https://github.com/DragonGawain/CGJ2023"
                 text="View the source code"
             />
-            <Button href="../" text="Return to Main" newTab={false} />
+            <Button href="../" text="Return to Main Menu" newTab={false} />
         </div>
     );
 }

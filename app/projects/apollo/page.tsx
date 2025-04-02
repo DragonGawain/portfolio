@@ -130,7 +130,7 @@ export default function Apollo() {
                 href="https://github.com/HugoML58/MTLGJ"
                 text="View the source code"
             />
-            <Button href="../" text="Return to Main" newTab={false} />
+            <Button href="../" text="Return to Main Menu" newTab={false} />
         </div>
     );
 }

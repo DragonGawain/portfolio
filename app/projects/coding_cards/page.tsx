@@ -363,7 +363,7 @@ export default function CodingCards() {
                 href="https://dragongawain.itch.io/coding-cards"
                 text="View on itch"
             />
-            <Button href="../" text="Return to Main" newTab={false} />
+            <Button href="../" text="Return to Main Menu" newTab={false} />
         </div>
     );
 }

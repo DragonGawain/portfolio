@@ -156,7 +156,7 @@ export default function FloorIsLava() {
                 href="https://github.com/DragonGawain/creative-jam-2024"
                 text="View the source code"
             />
-            <Button href="../" text="Return to Main" newTab={false} />
+            <Button href="../" text="Return to Main Menu" newTab={false} />
         </div>
     );
 }
