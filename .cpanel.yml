@@ -1,4 +1,5 @@
 ---
 deployment:
     tasks:
-        - export DEPLOYPATH=/home/craioxtm/repositories/portfolio/
+        # - export DEPLOYPATH=/home/craioxtm/repositories/portfolio/
+        - export DEPLOYPATH=/home/craioxtm/public_html/
