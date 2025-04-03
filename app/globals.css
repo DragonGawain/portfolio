@@ -58,37 +58,37 @@ body {
 
 .bgRooty {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(@/public/gifs/rooty2.gif) center center no-repeat;
+        url(../public/gifs/rooty2.gif) center center no-repeat;
     background-size: 100vw 100vh;
     background-attachment: fixed;
 }
 .bgApollo {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(@/public/gifs/apollo.gif) center center no-repeat;
+        url(../public/gifs/apollo.gif) center center no-repeat;
     background-size: 100vw 100vh;
     background-attachment: fixed;
 }
 .bgStrungAlong {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(@/public/gifs/strung_along.gif) center center no-repeat;
+        url(../public/gifs/strung_along.gif) center center no-repeat;
     background-size: 100vw 100vh;
     background-attachment: fixed;
 }
 .bgCheezyLunar {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(@/public/gifs/cheezyLunar.gif) center center no-repeat;
+        url(../public/gifs/cheezyLunar.gif) center center no-repeat;
     background-size: 100vw 100vh;
     background-attachment: fixed;
 }
 .bgFloorIsLava {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(@/public/gifs/floorIsLava.gif) center center no-repeat;
+        url(../public/gifs/floorIsLava.gif) center center no-repeat;
     background-size: 100vw 100vh;
     background-attachment: fixed;
 }
 .bgOperationYJLTG {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(@/public/gifs/operationYJLTG.gif) center center no-repeat;
+        url(../public/gifs/operationYJLTG.gif) center center no-repeat;
     background-size: 100vw 100vh;
     background-attachment: fixed;
 }
@@ -100,7 +100,7 @@ body {
     } */
 .bgNalbointo {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(@/public/gifs/nalbointo.gif) center center no-repeat;
+        url(../public/gifs/nalbointo.gif) center center no-repeat;
     background-size: 100vw 100vh;
     background-attachment: fixed;
 }
@@ -118,19 +118,19 @@ body {
 } */
 .bgCGL {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(@/public/gifs/cgl.gif) center center no-repeat;
+        url(../public/gifs/cgl.gif) center center no-repeat;
     background-size: 100vw 100vh;
     background-attachment: fixed;
 }
 .bgCodingCards {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(@/public/gifs/codingCards.gif) center center no-repeat;
+        url(../public/gifs/codingCards.gif) center center no-repeat;
     background-size: 100vw 100vh;
     background-attachment: fixed;
 }
 .bgMinesweeper {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(@/public/gifs/minesweeper.gif) center center no-repeat;
+        url(../public/gifs/minesweeper.gif) center center no-repeat;
     background-size: 100vw 100vh;
     background-attachment: fixed;
 }
