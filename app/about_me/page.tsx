@@ -9,16 +9,16 @@ export default function aboutMe() {
                 Hi! I'm Craig Kogan, a Software Engineer from Montreal, Canada.
                 I graduated from Concordia University in December 2024. I was
                 introduced to games at a very young age. I remember playing
-                Pacman on my dad's Atari once and grew up playing the orignal
+                Pacman on my dad's Atari, and I grew up playing the original
                 Super Mario Bros on the NES as well as the original Sonic The
-                Hedgehog 2 on the Sega Genesis. At some point when I was close
-                to the end of high school, I decided that I didn't want to just
-                play game, I wanted to make them. My original feelings that made
-                me interested in game dev was that I had wanted to give back to
-                the gaming community by making something of my own that I could
-                share with others. I started dabbling with some game dev tools,
-                but never got very far until I did my first game jam, the global
-                game jam 2023.
+                Hedgehog 2 on the Sega Genesis. Nowadays, I play games on PC. At
+                some point when I was close to the end of high school, I decided
+                that I didn't want to just play game, I wanted to make them. My
+                original feelings that made me interested in game dev was that I
+                had wanted to give back to the gaming community by making
+                something of my own that I could share with others. I started
+                dabbling with some game dev tools, but never got very far until
+                I did my first game jam, the global game jam 2023.
             </p>
             {/* <h2>My workflow</h2> */}
             <h2>Personalized IDE setup</h2>
@@ -132,7 +132,7 @@ export default function aboutMe() {
                 This first step is always to get an idea. In a jam, you're given
                 a theme and I tend to use this as a 'seed'. I take this idea
                 seed and I try to make a connection between it and anything
-                else. This conncetion can be full random, for example, 'rain'
+                else. This connection can be full random, for example, 'rain'
                 can lead to 'water', to 'ocean', to 'submarine', to 'underwater
                 submarine monster battle'. To bring that closer to the initial
                 theme, of 'rain', I'd replace the submarine with a fighter plane
@@ -141,11 +141,11 @@ export default function aboutMe() {
                 connecting thoughts, I form an idea for what the overall shape
                 of the game might look like. If I'm working with a team, I try
                 to get everyone to voice some ideas, and I move on to the next
-                phase once we've ammased some thoughts.
+                phase once we've amassed some thoughts.
             </p>
             <h3>Step 2: rough gameplay loop and mechanics</h3>
             <p>
-                The second step is to expand on the concept. There's a few key
+                The second step is to expand on the concept. There are a few key
                 questions I always ask. I pose these questions to both myself
                 and the team, and they are as follows:
             </p>
@@ -224,7 +224,7 @@ export default function aboutMe() {
                 the player gets to the other side'. In 48 hour jams, the art
                 assets get finished late into the jam, so I tend to work a lot
                 with only default assets. This is probably why this rough
-                definition of a story is so valuable to me. Even rough art wil
+                definition of a story is so valuable to me. Even rough art will
                 communicate to the devs what the general vibe of the game is,
                 but without that, we need something else to guide our passive
                 creative thoughts. Often, a loose idea of what the game story is
@@ -275,6 +275,32 @@ export default function aboutMe() {
                 still an evolving process though. I am constantly eager to learn
                 more about the game design process and improve upon my own
                 version of it!
+            </p>
+            <h2>Fun facts</h2>
+            <p>
+                I enjoy puzzle games and a good metroidvania. I also greatly
+                enjoy automation games, with Factorio standing as my number 1
+                favorite game of all time. In terms of puzzle games, Baba Is You
+                has remained my number 1 ever since I played it, but there have
+                been some close seconds. A special shoutout to CHR$(143), a not
+                very well known puzzle game that prides itself on it's extreme
+                difficulty. Less than 50 people worldwide have ever beaten all
+                72 levels (43 confirmed winners as of April 2025), with me being
+                number 22!
+            </p>
+            <p>
+                Outside of games, I'm a great enjoyer of books. I love a good
+                epic fantasy, such as The Wheel Of Time by Robert Jordan. I'm
+                also quite the outdoorsman, having spent the bulk of my
+                childhood summers at sleepaway camp. In my staff years, I
+                revived the out-of-camp canoe trip program that my summer camp
+                has. Without me, the program would have lost a lot of what makes
+                it special. I led canoe trips large and small, being the one
+                responsible for packing all the food and supplies as well as
+                ensuring the safety of all the campers on the trip. It was
+                stressful, but amazing at the same time. I still try to go back
+                for a weekend every summer, and have been told that my name has
+                become legendary!
             </p>
             <Button href="../" text="Return to Main Menu" newTab={false} />
         </div>

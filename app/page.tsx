@@ -16,21 +16,16 @@ export default function Home() {
                 animateBg === true ? bgClassName : "bgDefault"
             } `}
         >
-            <div>
-                <span className="block m-1">
-                    Toggle background animations on/off
-                </span>
+            <div className="flex">
                 <Switch
-                    onChange={function (): // checked: boolean,
-                    // event:
-                    //     | React.SyntheticEvent<MouseEvent | KeyboardEvent>
-                    //     | MouseEvent,
-                    // id: string
-                    void {
+                    onChange={function (): void {
                         DoAnimateBg(!animateBg);
                     }}
                     checked={animateBg}
                 />
+                <span className="block m-1 ml-3">
+                    Toggle background animations on/off
+                </span>
             </div>
             {/* <p>
                 I've done quite a few game jams, so I'll start by listing out
@@ -43,10 +38,10 @@ export default function Home() {
                 <ProjectCard
                     setBg={SetBg}
                     projTitle="About me"
-                    projDesc="Hi! I'm Craig Kogan, a Software Engineer from Montreal, Canada. I've been interested in game dev for a long time, so I learnt how to make games. You can learn more about me by clicking on this box, or you can look at any of my projects by clicking on them. I talk in detail about what my contribution to each project was, as well as some implementation details. Most of the projects on my website also have a live itch.io page where you can play the game, as well as a link to the open-source github repo."
+                    projDesc="Hi! I'm Craig Kogan, a Software Engineer from Montreal, Canada. I've been interested in game dev for a long time, so I learnt how to make games. You can learn more about me by clicking on this box, or you can learn more about any of my projects by clicking on them instead. I talk in detail about what my contribution to each project was, as well as some implementation details. Most of the projects on my website also have a live itch.io page where you can play the game, as well as a link to the open-source github repo where you can browse the source code."
                     buttonRef="/about_me"
                     bgClassName="bgDefault"
-                    imgSrc="/covers/transparent.png"
+                    imgSrc="/covers/me_photo_bg.jpg"
                     imgAltText=""
                 />
                 {/* projects go here */}
