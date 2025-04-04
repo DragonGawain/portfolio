@@ -7,7 +7,7 @@ interface FooterProps {
 export default function Footer({ className }: FooterProps) {
     return (
         <footer
-            className={`row-start-3 flex gap-[24px] flex-wrap items-center justify-center p-16 ${className}`}
+            className={`row-start-3 flex gap-[24px] flex-wrap items-center justify-center p-16 pb-12 ${className}`}
         >
             Check out my things!
             <FooterLink
@@ -27,6 +27,12 @@ export default function Footer({ className }: FooterProps) {
                 imgSrc="/icons/linkedinIcon.png"
                 imgAltText="Ln"
                 text="Linkedin"
+            />
+            <FooterLink
+                buttonRef="mailto:craigk00@hotmail.com"
+                imgSrc="/icons/emailIcon.png"
+                imgAltText="Email"
+                text="craigk00@hotmail.com"
             />
         </footer>
     );

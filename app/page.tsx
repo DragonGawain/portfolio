@@ -170,7 +170,7 @@ export default function Home() {
                 /> */}
                 {/* not currently on itch */}
             </div>
-            <Footer className="pb-0" />
+            <Footer className="!pb-0" />
         </div>
     );
 }
