@@ -1,7 +1,8 @@
 "use client";
 import ProjectCard from "@/components/ProjectCard";
-import FooterLink from "@/components/FooterLink";
+import Footer from "@/components/Footer";
 import { useState } from "react";
+// import { useLocalStorage } from "@uidotdev/usehooks";
 import Switch from "react-switch";
 
 // TODO:: Order my projects by how much I want other people to see them (not all jam games need to be together, nor do they need to be in chronological order)
@@ -12,7 +13,7 @@ export default function Home() {
 
     return (
         <div
-            className={`min-h-screen p-8 pb-20 gap-16 sm:p-20  ${
+            className={`min-h-screen p-20 gap-16 ${
                 animateBg === true ? bgClassName : "bgDefault"
             } `}
         >
@@ -169,27 +170,7 @@ export default function Home() {
                 /> */}
                 {/* not currently on itch */}
             </div>
-            <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-                Check out my things!
-                <FooterLink
-                    buttonRef="https://github.com/DragonGawain?tab=repositories"
-                    imgSrc="/icons/githubIcon.png"
-                    imgAltText="Git"
-                    text="Git repos"
-                />
-                <FooterLink
-                    buttonRef="https://dragongawain.itch.io/"
-                    imgSrc="/icons/itchioIcon.png"
-                    imgAltText="Itch"
-                    text="Itch.io profile"
-                />
-                <FooterLink
-                    buttonRef="https://www.linkedin.com/in/craig-kogan/"
-                    imgSrc="/icons/linkedinIcon.png"
-                    imgAltText="Ln"
-                    text="Linkedin"
-                />
-            </footer>
+            <Footer className="pb-0" />
         </div>
     );
 }

@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Button from "@/components/ui/Button";
 import Tooltip from "@/components/ui/Tooltip";
 
@@ -18,9 +19,9 @@ export default function OperationYJLTG() {
                 site was not available the entire time. Instead, the in person
                 site was only available on the final two days of the jam. This
                 made personal interaction a lot harder. I also found that my
-                teammates didn't put in as much effort towards the jam as I had
-                hoped they would, effectively meaning that my interactions with
-                them was lower than I had hoped. In the end, I was somewhat
+                teammates didn&apos;t put in as much effort towards the jam as I
+                had hoped they would, effectively meaning that my interactions
+                with them was lower than I had hoped. In the end, I was somewhat
                 disappointed with my goal of passing on knowledge, but enjoyed
                 the jam nonetheless.
             </p>
@@ -40,28 +41,28 @@ export default function OperationYJLTG() {
             </p>
             <h2>My contribution</h2>
             <p>
-                I did the lion's share of the programming for the game. Notably,
-                I created up the AI for the enemies, the character controller,
-                the inventory system, and the biome effects (my teammates did
-                help with the biomes, as well as other portions of the code that
-                I'm not mentioning).
+                I did the lion&apos;s share of the programming for the game.
+                Notably, I created up the AI for the enemies, the character
+                controller, the inventory system, and the biome effects (my
+                teammates did help with the biomes, as well as other portions of
+                the code that I&apos;m not mentioning).
             </p>
             <h2>Technical details</h2>
             <h3>AI</h3>
             <p>
                 I spent a lot of the jam time setting up the AI. The aliens and
-                humans both have distinct AI, so I'll go over both of them.
-                However, both enemies use the same core which I'll go over now.
-                Enemies have two state controllers, one for movement, the other
-                for combat. Each of these state controllers have substates that
-                are described in an enum (so there's a total of two enums). The
-                combat state controls what the enemy is doing at any given time.
-                It has more general substates such as WANDER, ATTACK, and FLEE.
-                The movement state controls <i>how</i> an enemy moves. For
-                example, if an enemy tries to move in a straight line and there
-                is a wall in the way, the movement state will tell the enemy to
-                rotate, allowing it to move around the wall instead of getting
-                stuck on it.
+                humans both have distinct AI, so I&apos;ll go over both of them.
+                However, both enemies use the same core which I&apos;ll go over
+                now. Enemies have two state controllers, one for movement, the
+                other for combat. Each of these state controllers have substates
+                that are described in an enum (so there&apos;s a total of two
+                enums). The combat state controls what the enemy is doing at any
+                given time. It has more general substates such as WANDER,
+                ATTACK, and FLEE. The movement state controls <i>how</i> an
+                enemy moves. For example, if an enemy tries to move in a
+                straight line and there is a wall in the way, the movement state
+                will tell the enemy to rotate, allowing it to move around the
+                wall instead of getting stuck on it.
             </p>
             <p>
                 Enemies use a vision system based on raycasts. In my experience,
@@ -84,11 +85,11 @@ export default function OperationYJLTG() {
                 it gets close enough, it begins circling the target, randomly
                 changing the direction that it circles. The random direction
                 change both made them more interesting, and made it so that two
-                humans wouldn't be locked in eternal combat with each other. The
-                human would also begin periodically shooting its gun at the
-                target. Humans have two other key features. If their ship is
-                attacked, they will immediately return to the ship to defend it.
-                Lastly, if a human got too low on HP, they would seek out a
+                humans wouldn&apos;t be locked in eternal combat with each
+                other. The human would also begin periodically shooting its gun
+                at the target. Humans have two other key features. If their ship
+                is attacked, they will immediately return to the ship to defend
+                it. Lastly, if a human got too low on HP, they would seek out a
                 medkit, which restores some HP.
             </p>
             <h4>Alien enemies</h4>
@@ -102,24 +103,24 @@ export default function OperationYJLTG() {
                 the base, all the aliens would chase after the target. If the
                 target managed to get a certain distance away from the alien
                 base, they would give up chase. However, the aliens would also
-                give chase for a minimum of 30 seconds so that players couldn't
-                remove alien aggro instantly and freely attack them. The aliens
-                were also able to handle multiple targets - if the base/aliens
-                were attacked by multiple targets, each individual alien would
-                randomly choose a single target to chase after. This made the
-                aliens feel much more natural. For example, if the player and a
-                human enemy both triggered the same alien base, but then the
-                human enemy got away, all the aliens that were chasing the human
-                enemy would shift focus to the player.
+                give chase for a minimum of 30 seconds so that players
+                couldn&apos;t remove alien aggro instantly and freely attack
+                them. The aliens were also able to handle multiple targets - if
+                the base/aliens were attacked by multiple targets, each
+                individual alien would randomly choose a single target to chase
+                after. This made the aliens feel much more natural. For example,
+                if the player and a human enemy both triggered the same alien
+                base, but then the human enemy got away, all the aliens that
+                were chasing the human enemy would shift focus to the player.
             </p>
             <p>
-                All in all, I'm quite pleased with how the AI turned out. It
-                feels like there's an ecosystem outside of just the player.
-                Combined with the sound design that allows the player to hear
-                things that they cannot see, it induces a feeling that they are
-                in a warzone. The constant sounds of human enemies shooting and
-                alien hurt and attack sounds going off add to the vibe of the
-                game.
+                All in all, I&apos;m quite pleased with how the AI turned out.
+                It feels like there&apos;s an ecosystem outside of just the
+                player. Combined with the sound design that allows the player to
+                hear things that they cannot see, it induces a feeling that they
+                are in a warzone. The constant sounds of human enemies shooting
+                and alien hurt and attack sounds going off add to the vibe of
+                the game.
             </p>
             <h3>Biomes</h3>
             <p>
@@ -190,13 +191,14 @@ export default function OperationYJLTG() {
             <p>
                 I enjoyed making all the AI and the other systems during this
                 jam! From a technical standpoint, I feel that I did a good job
-                with my implementation. There aren't any bugs in the AI that I'm
-                aware of. While the game could be better balanced (for example,
-                the five minute timer in phase two could be shorter), the game
-                is functionally complete. I do wish that my teammates had taken
-                advantage of the opportunity to learn more, but I did what I
-                could to make myself accessible. In the future, I don't plan on
-                using longer format jams to teach what I know.
+                with my implementation. There aren&apos;t any bugs in the AI
+                that I&apos;m aware of. While the game could be better balanced
+                (for example, the five minute timer in phase two could be
+                shorter), the game is functionally complete. I do wish that my
+                teammates had taken advantage of the opportunity to learn more,
+                but I did what I could to make myself accessible. In the future,
+                I don&apos;t plan on using longer format jams to teach what I
+                know.
             </p>
             <h3>Technical details overview</h3>
             <ul>
@@ -218,6 +220,7 @@ export default function OperationYJLTG() {
                 text="View the source code"
             />
             <Button href="../" text="Return to Main Menu" newTab={false} />
+            <Footer />
         </div>
     );
 }

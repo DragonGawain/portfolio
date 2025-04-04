@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Button from "@/components/ui/Button";
 
 export default function Apollo() {
@@ -22,20 +23,21 @@ export default function Apollo() {
             <h2>My contribution</h2>
             <p>
                 As I was still learning how to program in C#/Unity, my
-                contributions weren't as large for this jam. The main components
-                that I worked on was the interaction system (player interacting
-                with objects around the game), setting up the animations, and
-                building the scene terrain. I was also the creative lead on the
-                team, leading the game design discussion. I also set up most of
-                the hitboxes for the large 3D rocket ship model. We made the
-                hitboxes ourselves to ensure that they were placed properly and
-                wouldn't block off any passages or key interactables.
+                contributions weren&apos;t as large for this jam. The main
+                components that I worked on was the interaction system (player
+                interacting with objects around the game), setting up the
+                animations, and building the scene terrain. I was also the
+                creative lead on the team, leading the game design discussion. I
+                also set up most of the hitboxes for the large 3D rocket ship
+                model. We made the hitboxes ourselves to ensure that they were
+                placed properly and wouldn&apos;t block off any passages or key
+                interactables.
             </p>
             <h2>Technical challenges</h2>
             <p>
                 This jam happened over two years ago at the time of me writing
-                this, so I don't remember exact details. I'll only write down
-                what I'm sure of.
+                this, so I don&apos;t remember exact details. I&apos;ll only
+                write down what I&apos;m sure of.
             </p>
             <h3>Hitboxing</h3>
             <p>
@@ -52,11 +54,11 @@ export default function Apollo() {
                 was quite difficult for me to set up. The way it works is a 3D
                 raycast is performed in the direction that the player is
                 looking, capped to a certain range limit, and if it makes
-                contact with an interactable, it's interacted with. If it came
-                in contact with something else first, for example a wall, the
-                raycast would be blocked and the object would not be interacted
-                with. The system works well, but requires that interactables not
-                be blocked by other hitboxes.
+                contact with an interactable, it&apos;s interacted with. If it
+                came in contact with something else first, for example a wall,
+                the raycast would be blocked and the object would not be
+                interacted with. The system works well, but requires that
+                interactables not be blocked by other hitboxes.
             </p>
             <h3>Animations</h3>
             <p>
@@ -74,20 +76,20 @@ export default function Apollo() {
                 the animation that played, we loaded into a different scene. For
                 the animation itself, Cinemachine controlled the camera to track
                 the rocket. The rocket thrusters were created with the particle
-                system, and the rocket's position was altered smoothly via the
-                animation controller. In the bad ending, the particle system was
-                employed once more to create an explosion effect. While hiddin
-                within the explosion, the rocket prefab was deleted to make it
-                appear as though the rocket ship had been blown up. The
+                system, and the rocket&apos;s position was altered smoothly via
+                the animation controller. In the bad ending, the particle system
+                was employed once more to create an explosion effect. While
+                hiddin within the explosion, the rocket prefab was deleted to
+                make it appear as though the rocket ship had been blown up. The
                 explosion delay was set using the delay property of the particle
                 system. The good ending was functionally the same as the bad
                 ending, except that the ship did not blow up. After the good
                 ending animation, a fourth scene was loaded in to display the
                 second half of the good ending where a small lander landed on
                 the moon. If I were to recreate this with my current knowledge,
-                I wouldn't use so many different scenes. The first half of the
-                good ending is so similar to the bad ending that they could be
-                in the same scene with just some variable toggles. Having the
+                I wouldn&apos;t use so many different scenes. The first half of
+                the good ending is so similar to the bad ending that they could
+                be in the same scene with just some variable toggles. Having the
                 moon landing cinematic be in a scene of its own is also
                 unnecessary. I would most likely enable and disable large parent
                 objects that contain the complete cinematics within them. The
@@ -131,6 +133,7 @@ export default function Apollo() {
                 text="View the source code"
             />
             <Button href="../" text="Return to Main Menu" newTab={false} />
+            <Footer />
         </div>
     );
 }

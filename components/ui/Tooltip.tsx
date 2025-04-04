@@ -10,7 +10,7 @@ interface TooltipProps {
 // I can't hard define this since the position of text changes based on resolution and window size.
 export default function Tooltip({ text, tooltip }: TooltipProps) {
     const [isHover, SetIsHover] = useState("invisible");
-    const [offset, SetOffset] = useState("");
+    // const [offset, SetOffset] = useState("");
     return (
         <span>
             {" "}
@@ -18,18 +18,18 @@ export default function Tooltip({ text, tooltip }: TooltipProps) {
                 onMouseEnter={() => SetIsHover("visible")}
                 onMouseLeave={() => SetIsHover("invisible")}
                 className="underline"
-                ref={(el) => {
-                    if (!el) return;
-                    SetOffset(
-                        el.getBoundingClientRect().x > window.innerWidth / 1.85
-                            ? "start-[" +
-                                  (el.getBoundingClientRect().x - 400) +
-                                  "px]"
-                            : "start-[" +
-                                  el.getBoundingClientRect().right +
-                                  "px]"
-                    );
-                }}
+                // ref={(el) => {
+                //     if (!el) return;
+                //     SetOffset(
+                //         el.getBoundingClientRect().x > window.innerWidth / 1.85
+                //             ? "start-[" +
+                //                   (el.getBoundingClientRect().x - 400) +
+                //                   "px]"
+                //             : "start-[" +
+                //                   el.getBoundingClientRect().right +
+                //                   "px]"
+                //     );
+                // }}
             >
                 {text}
             </span>

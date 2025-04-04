@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Button from "@/components/ui/Button";
 import Tooltip from "@/components/ui/Tooltip";
 
@@ -13,15 +14,15 @@ export default function CodingCards() {
                 I built. Coding Cards is currently my main project. When I
                 started the project, I had a clear vision of what type of game I
                 wanted to make, and that has helped me a lot during development.
-                However, my vision is still evolving and I've made some major
-                decisions that have pulled away from my initial vision. I
+                However, my vision is still evolving and I&apos;ve made some
+                major decisions that have pulled away from my initial vision. I
                 started the project on May 20, 2024, but progress was
                 inconsistent until I graduated from univeristy in December of
                 the same year. It is a solo project, so everything has been done
                 by me. I am, however, looking for an artist and a musician to
                 join me/from whom I can purchase custom assets for my game.
             </p>
-            <h2>Technical details/what I've learnt</h2>
+            <h2>Technical details/what I&apos;ve learnt</h2>
             <p>
                 I have overcome a <i>lot</i> of challenges while creating this
                 game. As an example, I discovered pretty quickly the value of
@@ -56,15 +57,16 @@ export default function CodingCards() {
                     text="off-by-one"
                     tooltip="An off-by-one error is when the loop executes one time too many, or one time too few."
                 />{" "}
-                errors, as well as an issue where it wouldn't run at all if the
-                loop was supposed to be executed only once. The source of the
-                both of these errors was internal miscalculation. I thought a
-                lot about what a FOR loop is and what the simplest way to
+                errors, as well as an issue where it wouldn&apos;t run at all if
+                the loop was supposed to be executed only once. The source of
+                the both of these errors was internal miscalculation. I thought
+                a lot about what a FOR loop is and what the simplest way to
                 calculate the number of times it should run. In the end, my
-                answer was "take the value that the iterator stop at and
+                answer was &quot;take the value that the iterator stop at and
                 subtract the value the iterator starts at. Add 1 if the
-                condition has an equality in it." With this thought as the basis
-                of the calculation, I was able to fix both of these issues.
+                condition has an equality in it.&quot; With this thought as the
+                basis of the calculation, I was able to fix both of these
+                issues.
             </p>
             <p>
                 IF/WHILE commands had an issue where if one was evaluated to
@@ -72,9 +74,9 @@ export default function CodingCards() {
                 there was another IF/WHILE that evaluated to true (the issue
                 reset whenever a new script was executed, so it took me a while
                 to catch this one). The answer to this one was that my control
-                command ending wasn't actually ending the block. Once I realized
-                that this was happening, it was a simple fix of giving the
-                ending the required functionality.
+                command ending wasn&apos;t actually ending the block. Once I
+                realized that this was happening, it was a simple fix of giving
+                the ending the required functionality.
             </p>
             <p>
                 WHILE loops had infinite looping issues that could
@@ -108,8 +110,9 @@ export default function CodingCards() {
                 as an argument. I use extension methods for a few things, such
                 as randomizing the order of elements in a list. The largest use
                 I have for extension methods though is enums. I have extension
-                methods that allow me to get custom attributes that I've placed
-                on the enum value, to get a random value in an enum, and more.
+                methods that allow me to get custom attributes that I&apos;ve
+                placed on the enum value, to get a random value in an enum, and
+                more.
             </p>
             <h3>Enums</h3>
             <p>
@@ -117,17 +120,17 @@ export default function CodingCards() {
                 be defined. by default, values start at 0 and count upwards,
                 incrementing by 1 for every additional entry in the enum. You
                 can also assign your own integer value to each enum entry. The
-                integer that the entry is mapped to is an ID of sorts, so it's
-                good practice to not use the integer to store additional value.
-                Each value in an enum can also be assigned custom attributes.
-                These custom attributes can be of any type that I want. As an
-                example, every card in my game can have modifiers. To
-                communicate to the player what the modifier does, I use a
-                tooltip system. So, my CardModifier enum has values that
+                integer that the entry is mapped to is an ID of sorts, so
+                it&apos;s good practice to not use the integer to store
+                additional value. Each value in an enum can also be assigned
+                custom attributes. These custom attributes can be of any type
+                that I want. As an example, every card in my game can have
+                modifiers. To communicate to the player what the modifier does,
+                I use a tooltip system. So, my CardModifier enum has values that
                 describe each possible modifier a card can have, and each card
-                modifier (i.e. enum value) has a custom 'tooltip' attribute. I
-                can then use my extension method to get the string attribute and
-                use it to construct the tooltip for that card.
+                modifier (i.e. enum value) has a custom &apos;tooltip&apos;
+                attribute. I can then use my extension method to get the string
+                attribute and use it to construct the tooltip for that card.
             </p>
             <h3>Save system</h3>
             <p>
@@ -161,8 +164,8 @@ export default function CodingCards() {
                 place (as opposed to encoding being on the entity and decoding
                 in the SaveManager) making everything easier to find. It also
                 makes the save file itself much easier to read since the data is
-                now being stored as JSON. It's much easier to edit what is being
-                saved and in what format (number, string, binary, etc). In
+                now being stored as JSON. It&apos;s much easier to edit what is
+                being saved and in what format (number, string, binary, etc). In
                 addition, it will be much easier to encrypt JSON then it would
                 have been to encrypt my custom save data strings. I feel fairly
                 proficient in the use of the serialization package and would be
@@ -180,7 +183,7 @@ export default function CodingCards() {
                     day that I work on the game, I add a dated entry and fill it
                     as I work throughout the day. This helps keep me on task,
                     and makes it very easy for me to look back and see where I
-                    left off if I don't work on it for some time.
+                    left off if I don&apos;t work on it for some time.
                 </li>
                 <li>
                     Fundamentally, a WHILE is simply an IF that gets reevaluated
@@ -188,17 +191,17 @@ export default function CodingCards() {
                     contents are executed again.
                 </li>
                 <li>
-                    It is better to have a single 'tooltip' gameObject that
-                    follows the cursor as opposed to giving every gameObject its
-                    own hidden tooltip child object. Having a single object
-                    follow the mouse allows you to have it follow precise mouse
-                    movement, as well as snap it to screen corners so that it
-                    does not go off screen. Giving each entity a hidden tooltip
-                    child might cause issues if you don't know where everything
-                    can be placed. Even placement is not enough - different
-                    screen resolution can cause entities to be shifted. In
-                    addition, it's faster and uses less storage space to use a
-                    single object than many.
+                    It is better to have a single &apos;tooltip&apos; gameObject
+                    that follows the cursor as opposed to giving every
+                    gameObject its own hidden tooltip child object. Having a
+                    single object follow the mouse allows you to have it follow
+                    precise mouse movement, as well as snap it to screen corners
+                    so that it does not go off screen. Giving each entity a
+                    hidden tooltip child might cause issues if you don&apos;t
+                    know where everything can be placed. Even placement is not
+                    enough - different screen resolution can cause entities to
+                    be shifted. In addition, it&apos;s faster and uses less
+                    storage space to use a single object than many.
                 </li>
             </ul>
 
@@ -216,15 +219,16 @@ export default function CodingCards() {
             </p>
             <h3>Fight type events</h3>
             <p>
-                There are a few variations of the 'fight' type event: 'fight',
-                'miniboss', and 'boss'. The fight events are the core of the
-                gameplay loop. In a fight event, you play your cards to interact
-                with the world. Your ultimate goal is to navigate to the key(s)
-                to collect them. Once you've collected all the keys, you can
-                make your way to the gate cell. Upon reaching the unlocked gate,
-                the level will be cleared. There are also enemies that you need
-                to deal with (I'll speak about those later). I have plans to add
-                in an alternate win condition - defeating all the enemies in the
+                There are a few variations of the &apos;fight&apos; type event:
+                &apos;fight&apos;, &apos;miniboss&apos;, and &apos;boss&apos;.
+                The fight events are the core of the gameplay loop. In a fight
+                event, you play your cards to interact with the world. Your
+                ultimate goal is to navigate to the key(s) to collect them. Once
+                you&apos;ve collected all the keys, you can make your way to the
+                gate cell. Upon reaching the unlocked gate, the level will be
+                cleared. There are also enemies that you need to deal with
+                (I&apos;ll speak about those later). I have plans to add in an
+                alternate win condition - defeating all the enemies in the
                 level. The idea behind it is that it would allow for two main
                 strategies: a high-mobility build where the player gets the
                 key(s) and arrives at the gate very quickly, or a combat build
@@ -251,18 +255,18 @@ export default function CodingCards() {
                     tooltip="My random card generator produces a card that has a random number of randomly selected commands on it. Building it came with its own set of challenges, but I ultimately solved them with some clever extension method usage. The extension methods also reduced code duplication, making the code much more readable!"
                 />{" "}
                 that I built. It then randomly selects three cards from the
-                player's deck and offers to exhange one of the cards that the
-                player has with one of the randomly generated ones. Each card
-                selected from the deck is paired with a card on offer, setting
-                up the available trades. I really like the way the trader turned
-                out. Sometimes it makes funny cards, such as loops that end
-                immediately and so can't have anything inside of them. Or cards
-                that move left then right (which actually does have a usecase).
-                It can also produce really valuable cards, so its power is not
-                to be underestimated! I find it most interesting when the trader
-                creates a card that is very useful, but that I had not yet
-                conceived of. It makes me very excited for the future when my
-                games shows me its own potential!
+                player&apos;s deck and offers to exhange one of the cards that
+                the player has with one of the randomly generated ones. Each
+                card selected from the deck is paired with a card on offer,
+                setting up the available trades. I really like the way the
+                trader turned out. Sometimes it makes funny cards, such as loops
+                that end immediately and so can&apos;t have anything inside of
+                them. Or cards that move left then right (which actually does
+                have a usecase). It can also produce really valuable cards, so
+                its power is not to be underestimated! I find it most
+                interesting when the trader creates a card that is very useful,
+                but that I had not yet conceived of. It makes me very excited
+                for the future when my games shows me its own potential!
             </p>
             <h3>Card editor</h3>
             <p>
@@ -276,10 +280,10 @@ export default function CodingCards() {
                 add even the rare commands and unique modifiers to cards, I
                 introduced currency to balance it! Each piece of a command has a
                 different cost, as do modifiers. For example, when building a
-                FOR loop, the '&gt;=' symbol should be more expensive than
-                '&gt;' as it would allow the FOR loop to run an additional time.
-                The cost to add something can be different than the cost to
-                remove it.
+                FOR loop, the &apos;&gt;=&apos; symbol should be more expensive
+                than &apos;&gt;&apos; as it would allow the FOR loop to run an
+                additional time. The cost to add something can be different than
+                the cost to remove it.
             </p>
             <h3>Lighting, Interrupts, Enemies</h3>
             <h4>Lighting</h4>
@@ -291,27 +295,28 @@ export default function CodingCards() {
                     href="https://docs.unity3d.com/2022.3/Documentation/Manual/index.html"
                     text="Unity's Universal Render Pipeline"
                 />{" "}
-                for lighting. However, I'm not currently using it. I have some
-                potential plans that incorporate using lighting, but nothing
-                that is guranteed to be implemented yet.
+                for lighting. However, I&apos;m not currently using it. I have
+                some potential plans that incorporate using lighting, but
+                nothing that is guranteed to be implemented yet.
             </p>
             <h4>Interrupts</h4>
             <p>
-                Another system that I'm quite proud of is the interrupt system.
-                If the first command on a card is an IF control command, then
-                that card can have the interrupt modifier! If a card with the
-                interrupt modifier is played, it does not enter the normal
+                Another system that I&apos;m quite proud of is the interrupt
+                system. If the first command on a card is an IF control command,
+                then that card can have the interrupt modifier! If a card with
+                the interrupt modifier is played, it does not enter the normal
                 script. Instead, its condition is evaluated after every
-                statement command is executed (yes, that's both what it does and
-                how it's implemented internally). If the condition is true,
-                normal script execution is paused and the interrupt runs. Once
-                the interrupt is finished, the script resumes from where it left
-                off. Designing this system was a lot of fun. The interrupt
-                system is a way for players to interact with the game while the
-                script is executing. I like the extra level of reactive control
-                it gives players. This is one of those 'unique modifiers' I
-                mentioned earlier. I call it unique because you cannot create a
-                card with this modifier through post-fight card creation.
+                statement command is executed (yes, that&apos;s both what it
+                does and how it&apos;s implemented internally). If the condition
+                is true, normal script execution is paused and the interrupt
+                runs. Once the interrupt is finished, the script resumes from
+                where it left off. Designing this system was a lot of fun. The
+                interrupt system is a way for players to interact with the game
+                while the script is executing. I like the extra level of
+                reactive control it gives players. This is one of those
+                &apos;unique modifiers&apos; I mentioned earlier. I call it
+                unique because you cannot create a card with this modifier
+                through post-fight card creation.
             </p>
             <h4>Enemies</h4>
             <p>
@@ -364,6 +369,7 @@ export default function CodingCards() {
                 text="View on itch"
             />
             <Button href="../" text="Return to Main Menu" newTab={false} />
+            <Footer />
         </div>
     );
 }

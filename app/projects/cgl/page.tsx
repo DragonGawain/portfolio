@@ -1,15 +1,16 @@
+import Footer from "@/components/Footer";
 import Button from "@/components/ui/Button";
 
 export default function CGL() {
     return (
         <div className="projectPage">
-            <h1>Conway's Game Of Life</h1>
+            <h1>Conway&apos;s Game Of Life</h1>
             <h2>About the game</h2>
             <p>
-                Conway's Game Of Life is a 0 player game played in a sqaure
-                grid. It simulates the life cycle of 'cells' based on four
-                simple rules. Conway's Game Of life considers diagonal cells to
-                be adjacent. The rules are as follows:
+                Conway&apos;s Game Of Life is a 0 player game played in a sqaure
+                grid. It simulates the life cycle of &apos;cells&apos; based on
+                four simple rules. Conway&apos;s Game Of life considers diagonal
+                cells to be adjacent. The rules are as follows:
             </p>
             <ol>
                 <li>
@@ -32,10 +33,10 @@ export default function CGL() {
             <p>
                 Every generation, the rules are run on all the cells and cells
                 become dead/alive as needed. There are a lot of interesting
-                patterns that can emerge from the Game Of Life, but that's
-                outside of the scope of what I'll be talking about here. If
-                you're interested in learning more about Conway's Game Of Life
-                and the patterns that emerge, I'll refer you to{" "}
+                patterns that can emerge from the Game Of Life, but that&apos;s
+                outside of the scope of what I&apos;ll be talking about here. If
+                you&apos;re interested in learning more about Conway&apos;s Game
+                Of Life and the patterns that emerge, I&apos;ll refer you to{" "}
                 <Button
                     text="the wikipedia article about it"
                     href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life"
@@ -46,9 +47,10 @@ export default function CGL() {
             </p>
             <h2>My recreation</h2>
             <p>
-                I created Conway's Game Of Life twice. My first attempt suffered
-                from massive lag issues, so I redid the project to deal with the
-                lag issues. The entire project took me a total of three days.
+                I created Conway&apos;s Game Of Life twice. My first attempt
+                suffered from massive lag issues, so I redid the project to deal
+                with the lag issues. The entire project took me a total of three
+                days.
             </p>
             <h3>The first attempt</h3>
             <p>
@@ -61,8 +63,8 @@ export default function CGL() {
                     buttonType="inline"
                 />
                 {/* TODO: add a page on my website about my custom tile system. Refer to that link here. */}
-                . Sadly, I wasn't able to get that to work, but I continued with
-                the tilemap method By manually checking each tile in every
+                . Sadly, I wasn&apos;t able to get that to work, but I continued
+                with the tilemap method By manually checking each tile in every
                 generation, I toggled the state of the tiles (once more using my
                 custom data-holding tiles from my Minesweeper game) to be either
                 dead or alive. This suffered from a few issues. Firstly, the lag
@@ -73,9 +75,9 @@ export default function CGL() {
                 generation, the only cells that need to be checked are the live
                 cells and the neighbours of all the live cells. The second major
                 issue was that by using a tilemap there was a boundary to the
-                simulation. Some patterns result in 'flying machines' that move
-                an infinite distance in a certain direction. If any of these
-                flying machines hit the edge of the tilemap, they would be
+                simulation. Some patterns result in &apos;flying machines&apos;
+                that move an infinite distance in a certain direction. If any of
+                these flying machines hit the edge of the tilemap, they would be
                 forcibly deleted, which would result in an inaccurate population
                 count, as well as destroy the potential for the flying machine
                 to collide with another one, thus altering it in some way. The
@@ -110,7 +112,7 @@ export default function CGL() {
                 <li>
                     First, each live cell checks how many live neighbours it
                     has. If it has fewer than 2 or more than 3 live neighbours,
-                    it's added to a list.
+                    it&apos;s added to a list.
                 </li>
                 <li>
                     Second, I go through all the cells in the frontier (the list
@@ -144,9 +146,9 @@ export default function CGL() {
                 generation. I could instead keep it as a running total. My code
                 already has a check to skip over live cells when counting, so
                 that would simply need to be applied to spawning - if a cell was
-                already alive, don't spawn a new cell on top of it. That being
-                said, the existing form works well enough. It only starts to
-                experience minor lag issues if the population goes above 2000
+                already alive, don&apos;t spawn a new cell on top of it. That
+                being said, the existing form works well enough. It only starts
+                to experience minor lag issues if the population goes above 2000
                 living cells and there is a cluster of cells in proximity to
                 each other.
             </p>
@@ -158,10 +160,10 @@ export default function CGL() {
                 it by comparing search speed in data structures for my Data
                 Structures and Algorithms class, but it was a good reminder to
                 never fully settle on a single design pattern. Through this
-                project, I also learnt a bit about what is and isn't efficient
-                in Unity. I now am very much aware that attempting to refresh
-                thousands of tiles in a tilemap every frame is very laggy. For a
-                short project, I got a lot out of it!
+                project, I also learnt a bit about what is and isn&apos;t
+                efficient in Unity. I now am very much aware that attempting to
+                refresh thousands of tiles in a tilemap every frame is very
+                laggy. For a short project, I got a lot out of it!
             </p>
             <h3>Technical details overview</h3>
             <ul>
@@ -177,6 +179,7 @@ export default function CGL() {
                 text="View the source code"
             />
             <Button href="../" text="Return to Main Menu" newTab={false} />
+            <Footer />
         </div>
     );
 }

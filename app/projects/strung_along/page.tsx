@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Button from "@/components/ui/Button";
 import Tooltip from "@/components/ui/Tooltip";
 
@@ -11,11 +12,12 @@ export default function StrungAlong() {
                 skills with Unity were developped to the point that I could be
                 assigned major tasks that the game depended on. I was also
                 continuing my trend of being very involved with game design
-                discussion we held at the start of the jam. As it's been around
-                17 months since this jam at the time that I'm writing this, I
-                don't recall how much of the game concept I came up with. I do
-                recall that I was still refining my game design skills and that
-                it was a group effort to arrive at our final design though.
+                discussion we held at the start of the jam. As it&apos;s been
+                around 17 months since this jam at the time that I&apos;m
+                writing this, I don&apos;t recall how much of the game concept I
+                came up with. I do recall that I was still refining my game
+                design skills and that it was a group effort to arrive at our
+                final design though.
             </p>
             <h2>About the game</h2>
             <p>
@@ -27,9 +29,10 @@ export default function StrungAlong() {
                 />{" "}
                 as possible. We ended up with 9 out of the 18 modifiers, the
                 most the any team included! The modifier that probably had the
-                largest impact on our game design was 'Name a better pair',
-                which had us 'include a cooperative aspect' in the game. Our
-                game concept settled into being a 2 player
+                largest impact on our game design was &apos;Name a better
+                pair&apos;, which had us &apos;include a cooperative
+                aspect&apos; in the game. Our game concept settled into being a
+                2 player
                 <Tooltip
                     text="couch-coop"
                     tooltip="A couch-coop game is a cooperative game where players are expected to be in the same physical location, such as sitting next to each other on a couch, while playing the game. In the case of this game, the standard keyboard control scheme has both players using the same keyboard."
@@ -65,8 +68,8 @@ export default function StrungAlong() {
             </ul>
             <p>
                 I learnt very quickly that a string is <i>very</i> difficult to
-                make well. I don't recall exactly how much trial and error it
-                took to eventually arrive at the solution that I did (again,
+                make well. I don&apos;t recall exactly how much trial and error
+                it took to eventually arrive at the solution that I did (again,
                 this jam was about 17 months ago at the time of writing this),
                 but I eventually ended up with a string of 21 nodes, with the
                 two player characters being extra nodes, bringing the total
@@ -86,7 +89,7 @@ export default function StrungAlong() {
                 needed were:
             </p>
             <ol>
-                <li>Don't stretch if pulled apart</li>
+                <li>Don&apos;t stretch if pulled apart</li>
                 <li>
                     Either player could pull the other if the string was taut
                     (this includes a player being suspended if the other player
@@ -103,7 +106,7 @@ export default function StrungAlong() {
                     change which end of the string that they are on.
                 </li>
             </ol>
-            <h3>How it's built: the nodes</h3>
+            <h3>How it&apos;s built: the nodes</h3>
             <p>
                 As mentioned before, the string is an ordered list of 21 nodes.
                 The number of nodes was experimentally determined, defined by
@@ -154,7 +157,8 @@ export default function StrungAlong() {
                 stationary player to the moving player are close enough
                 together. Since each node can only be moved a certain amount
                 each time it is checked (to prevent all the nodes from bunching
-                up together), this helped give the string some 'weight'.
+                up together), this helped give the string some
+                &apos;weight&apos;.
             </p>
             <h3>String logic case 2: both players are moving</h3>
             <p>
@@ -175,16 +179,16 @@ export default function StrungAlong() {
                 itself by pulling on the players. All together, it pulls both
                 players closer to the center, then allows the string itself to
                 shift a bit closer to the player that is further away. A
-                consistent way to stretch the string is the cat player's dash
-                ability though. This forcibly gave the cat a burst of speed,
-                allowing it to stretch the string a bit. The end result is that
-                the rabbit player is, slowly, pulled towards the cat player. The
-                moment either player stops moving, the single player (or 0
-                player) string logic kicks in and immediately fixes the string,
-                bringing it back to its intended maximum length and pulling both
-                players towards the center. Using the cat's dash ability is the
-                only way that I can currently think of that stretches the
-                string.
+                consistent way to stretch the string is the cat player&apos;s
+                dash ability though. This forcibly gave the cat a burst of
+                speed, allowing it to stretch the string a bit. The end result
+                is that the rabbit player is, slowly, pulled towards the cat
+                player. The moment either player stops moving, the single player
+                (or 0 player) string logic kicks in and immediately fixes the
+                string, bringing it back to its intended maximum length and
+                pulling both players towards the center. Using the cat&apos;s
+                dash ability is the only way that I can currently think of that
+                stretches the string.
             </p>
             <h3>String gravity and interaction</h3>
             <p>
@@ -193,10 +197,10 @@ export default function StrungAlong() {
                 decided that only the central node would be affected by gravity.
                 This had the intended effect of pulling the entire string down.
                 While this made it so that some nodes could float, the string
-                was short enough that this wasn't much of an issue. In the end,
-                this decision made the string perform better. Also, since that
-                was a game jam submission, time was of the essence and I was
-                very willing to make the sacrifice of allowing some nodes to
+                was short enough that this wasn&apos;t much of an issue. In the
+                end, this decision made the string perform better. Also, since
+                that was a game jam submission, time was of the essence and I
+                was very willing to make the sacrifice of allowing some nodes to
                 float for the trade off of having a higher functioning string.
             </p>
             <p>
@@ -250,6 +254,7 @@ export default function StrungAlong() {
                 text="View the source code"
             />
             <Button href="../" text="Return to Main Menu" newTab={false} />
+            <Footer />
         </div>
     );
 }

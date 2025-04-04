@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Button from "@/components/ui/Button";
 
 export default function Nalbointo() {
@@ -25,12 +26,13 @@ export default function Nalbointo() {
                 Large Sword. A turn is spent either moving to an adjecent cell
                 (moving both the player and the sword), or rotating, which only
                 moves the sword. Unlike DROD, Nalbointo uses a hexagonal grid
-                whereas DROD uses a square grid. Nalbointo's sword also cannot
-                move on top of walls, and Nalbointo cannot move diagonally.
+                whereas DROD uses a square grid. Nalbointo&apos;s sword also
+                cannot move on top of walls, and Nalbointo cannot move
+                diagonally.
             </p>
             <h2>My contributions</h2>
             <p>
-                I did the lion's share of the programming, including the
+                I did the lion&apos;s share of the programming, including the
                 character controller, collision checks for player/sword, setting
                 up the tilemap, enemy AI, lighting, and inventory system. My
                 partner set up the save system, art, and music. Some aspects,
@@ -47,38 +49,39 @@ export default function Nalbointo() {
                 All enemies die if they end up in the same cell as the sword.
                 Neither type enemy are able to walk directly onto the sword,
                 requiring that the player give an input to kill the enemies. The
-                player moves before the enemies to make it so that enemies can't
-                'dodge' an attack. Enemies also have an activation radius. Until
-                the player gets close enough to them, the enemies remain
-                completely stationary. This was done partly because of the
-                dynamic lighting that I had set up. The other reason was that,
-                for larger levels especially, we had wanted the player to
-                overcome certain challenges. If all the enemies attempted to
-                converge on the player's location from turn 1, it would ruin the
-                hand crafted level design. As an example, if an enemy was set up
-                to ambush the player, the ambush wouldn't work if the enemy
-                moved from its spot before the player got close.
+                player moves before the enemies to make it so that enemies
+                can&apos;t &apos;dodge&apos; an attack. Enemies also have an
+                activation radius. Until the player gets close enough to them,
+                the enemies remain completely stationary. This was done partly
+                because of the dynamic lighting that I had set up. The other
+                reason was that, for larger levels especially, we had wanted the
+                player to overcome certain challenges. If all the enemies
+                attempted to converge on the player&apos;s location from turn 1,
+                it would ruin the hand crafted level design. As an example, if
+                an enemy was set up to ambush the player, the ambush
+                wouldn&apos;t work if the enemy moved from its spot before the
+                player got close.
             </p>
             <h3>Dynamic lighting</h3>
             <p>
-                All the walls block light, creating a 'fog of war' type of
-                effect. As I mentioned earlier, this is part of why enemies only
-                activate when the player gets close enough. We wanted to make
-                sure that the player could see the enemies moving. It is a
-                puzzle game after all, and I am not a fan of information hiding
-                as a method to create difficult puzzles. In the game, there are
-                three different types of torches that cast light. The player
-                also has a light zone around them so that they can see their
-                immediate surroundings. The first type of torch is the green
-                permanent torches. These were placed by my partner and I to
-                light up certain parts of the levels that we want to always be
-                visible. The second type of torch is the blue torch. These start
-                unlit, but light up the first time the player touches them with
-                either the sword or their body. Upon touching a blue torch, the
-                game saves. Touching a lit blue torch saves the game again.. The
-                last type of torch is the orange torch. The player starts with
-                10 of these and can place or pick them up as they desire. In
-                terms of implementation, I used{" "}
+                All the walls block light, creating a &apos;fog of war&apos;
+                type of effect. As I mentioned earlier, this is part of why
+                enemies only activate when the player gets close enough. We
+                wanted to make sure that the player could see the enemies
+                moving. It is a puzzle game after all, and I am not a fan of
+                information hiding as a method to create difficult puzzles. In
+                the game, there are three different types of torches that cast
+                light. The player also has a light zone around them so that they
+                can see their immediate surroundings. The first type of torch is
+                the green permanent torches. These were placed by my partner and
+                I to light up certain parts of the levels that we want to always
+                be visible. The second type of torch is the blue torch. These
+                start unlit, but light up the first time the player touches them
+                with either the sword or their body. Upon touching a blue torch,
+                the game saves. Touching a lit blue torch saves the game again..
+                The last type of torch is the orange torch. The player starts
+                with 10 of these and can place or pick them up as they desire.
+                In terms of implementation, I used{" "}
                 <Button
                     colorScheme="none"
                     buttonType="inline"
@@ -111,16 +114,16 @@ export default function Nalbointo() {
                 open all closed gates that they influence. To set that up, each
                 gate has a SerializedField Array that we can drag/drop buttons
                 into in the Unity editor. Then, every time the button is
-                activated, it changes it's state. Every gate checks all of it's
-                buttons every frame and opens/closes accordingly. This is a
-                pretty silly implementation of button and gates. A much better
-                implementation would be to have the buttons contain an array of
-                the gates it toggles, and every time the button is pressed, it
-                toggles all of its related gates. The only potential advantage I
-                could see in the implemented system is that it guarantees
-                correctness if two buttons are activated on the same turn.
-                However, that's a very simple fix only requiring a defined turn
-                order. For example: player, sword, enemies.
+                activated, it changes it&apos;s state. Every gate checks all of
+                it&apos;s buttons every frame and opens/closes accordingly. This
+                is a pretty silly implementation of button and gates. A much
+                better implementation would be to have the buttons contain an
+                array of the gates it toggles, and every time the button is
+                pressed, it toggles all of its related gates. The only potential
+                advantage I could see in the implemented system is that it
+                guarantees correctness if two buttons are activated on the same
+                turn. However, that&apos;s a very simple fix only requiring a
+                defined turn order. For example: player, sword, enemies.
             </p>
             <p>
                 We had had plans for other ideas, such as multi-floor levels,
@@ -153,47 +156,47 @@ export default function Nalbointo() {
             </p>
             <p>
                 The third and final level is a boss level where we implemented a
-                special 'ghost' enemy. The ghost enemy cannot be killed and uses
-                the A* algorithm to chase the player. If the ghost gets too
-                close to the player, it slows down a bit so that the player can
-                use combat maneuvers that involve moving backwards and not be
-                harshly punished for it. However, if the player spends too long
-                dealing with a group of enemies, the ghost will catch up and
-                kill the player. This level also features some hidden passages
-                that are completely unmarked as a reward to players who poke at
-                every wall. The ghost cannot travel through the secret passages,
-                so it gives the player a big head lead. I did a lot of the level
-                designing, coming up with the level concepts and building them.
-                My partner playtested them and gave balance suggestions. If I
-                recall, I had asked them if they were interested in making any
-                of the levels and they had told me no, but I may be
-                misremembering.
+                special &apos;ghost&apos; enemy. The ghost enemy cannot be
+                killed and uses the A* algorithm to chase the player. If the
+                ghost gets too close to the player, it slows down a bit so that
+                the player can use combat maneuvers that involve moving
+                backwards and not be harshly punished for it. However, if the
+                player spends too long dealing with a group of enemies, the
+                ghost will catch up and kill the player. This level also
+                features some hidden passages that are completely unmarked as a
+                reward to players who poke at every wall. The ghost cannot
+                travel through the secret passages, so it gives the player a big
+                head lead. I did a lot of the level designing, coming up with
+                the level concepts and building them. My partner playtested them
+                and gave balance suggestions. If I recall, I had asked them if
+                they were interested in making any of the levels and they had
+                told me no, but I may be misremembering.
             </p>
             <h2>Technical challenges</h2>
             <p>
                 There were a few technical challenges that we encountered along
                 the way. Firstly, the way I implemented the player and sword is
-                not very good. Internally, there is a 'scout' object that checks
-                the cell the player/sword want to move into and if there is a
-                wall there that blocks movement, the move is cancelled. Instead
-                of having an object check the cell(s), I could have figured out
-                which cell the player/sword wanted to move into and check if the
-                move was legal in the code. The introduction of the scout object
-                was completely unnecessary and caused other complications. The
-                scout system in general was very clunky, and after the project
-                was complete I created a demo that tested how a system without
-                the scouts would work and successfully had a prototype working
-                within 30 minutes.
+                not very good. Internally, there is a &apos;scout&apos; object
+                that checks the cell the player/sword want to move into and if
+                there is a wall there that blocks movement, the move is
+                cancelled. Instead of having an object check the cell(s), I
+                could have figured out which cell the player/sword wanted to
+                move into and check if the move was legal in the code. The
+                introduction of the scout object was completely unnecessary and
+                caused other complications. The scout system in general was very
+                clunky, and after the project was complete I created a demo that
+                tested how a system without the scouts would work and
+                successfully had a prototype working within 30 minutes.
             </p>
             <p>
-                Other than the very clunky to use scout system, I didn't face
-                many other technical challenges. Setting up the A* algorithm
-                took some work as this was the first project I did where I used
-                the A* algorithm. Speaking of A*, learning to think in hexagonal
-                grid coordinates was also a challenge that I faced early on.
-                Thankfully I found some resources online that helped explain how
-                hexagonal grids work and they helped me build my mental model of
-                the coordinates.
+                Other than the very clunky to use scout system, I didn&apos;t
+                face many other technical challenges. Setting up the A*
+                algorithm took some work as this was the first project I did
+                where I used the A* algorithm. Speaking of A*, learning to think
+                in hexagonal grid coordinates was also a challenge that I faced
+                early on. Thankfully I found some resources online that helped
+                explain how hexagonal grids work and they helped me build my
+                mental model of the coordinates.
             </p>
             <h3>Technical details overview</h3>
             <ul>
@@ -215,6 +218,7 @@ export default function Nalbointo() {
                 text="View the source code"
             /> */}
             <Button href="../" text="Return to Main Menu" newTab={false} />
+            <Footer />
         </div>
     );
 }
