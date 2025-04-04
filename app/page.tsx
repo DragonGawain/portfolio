@@ -1,7 +1,7 @@
 "use client";
 import ProjectCard from "@/components/ProjectCard";
 import Footer from "@/components/Footer";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 // import { useLocalStorage } from "@uidotdev/usehooks";
 import Switch from "react-switch";
 
@@ -11,9 +11,22 @@ export default function Home() {
     const [bgClassName, SetBg] = useState("bgDefault");
     const [animateBg, DoAnimateBg] = useState(true);
 
+    // get
+    useEffect(() => {
+        const storedAnimate = localStorage.getItem("animateBgState");
+        if (storedAnimate !== null) {
+            DoAnimateBg(storedAnimate === "true"); // condensed ternary: storedAnimate === true ? true : false
+        }
+    }, []);
+
+    // set
+    useEffect(() => {
+        localStorage.setItem("animateBgState", String(animateBg));
+    }, [animateBg]);
+
     return (
         <div
-            className={`min-h-screen p-20 gap-16 ${
+            className={`min-h-screen p-20 gap-16 dark ${
                 animateBg === true ? bgClassName : "bgDefault"
             } `}
         >
