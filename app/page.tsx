@@ -26,7 +26,7 @@ export default function Home() {
 
     return (
         <div
-            className={`min-h-screen p-20 gap-16 dark ${
+            className={`min-h-screen p-20 gap-16 ${
                 animateBg === true ? bgClassName : "bgDefault"
             } `}
         >

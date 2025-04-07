@@ -36,7 +36,7 @@ export default function Tooltip({ text, tooltip }: TooltipProps) {
             {/* TODO:: fix the offset thingy. (calc works, but the tooltip is not moving to the left) */}
             {/* BUG:: shorter tooltips will be moved all the way, so I need to adjust for that. Maybe just make min width 400px as well as a cheaty way? */}
             <span
-                className={`${isHover} absolute  bg-black text-white dark:bg-white dark:text-black background-cover indent-0 p-1 max-w-[400px]`}
+                className={`${isHover} absolute   bg-white text-black background-cover indent-0 p-1 max-w-[400px]`}
             >
                 {tooltip}
             </span>
