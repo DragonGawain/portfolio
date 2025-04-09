@@ -16,3 +16,5 @@
 -   Coding cards
 -   Conways Game Of Life
 -   Minesweeper
+-   MATLAB IF?
+-   Chess AI?
