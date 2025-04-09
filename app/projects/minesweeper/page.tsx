@@ -1,4 +1,3 @@
-import Footer from "@/components/Footer";
 import Button from "@/components/ui/Button";
 
 export default function Minesweeper() {
@@ -119,7 +118,6 @@ export default function Minesweeper() {
                 text="View the source code"
             />
             <Button href="../" text="Return to Main Menu" newTab={false} />
-            <Footer />
         </div>
     );
 }

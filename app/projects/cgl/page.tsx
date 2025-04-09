@@ -1,4 +1,3 @@
-import Footer from "@/components/Footer";
 import Button from "@/components/ui/Button";
 
 export default function CGL() {
@@ -179,7 +178,6 @@ export default function CGL() {
                 text="View the source code"
             />
             <Button href="../" text="Return to Main Menu" newTab={false} />
-            <Footer />
         </div>
     );
 }

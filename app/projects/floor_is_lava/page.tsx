@@ -1,4 +1,3 @@
-import Footer from "@/components/Footer";
 import Button from "@/components/ui/Button";
 import Tooltip from "@/components/ui/Tooltip";
 
@@ -159,7 +158,6 @@ export default function FloorIsLava() {
                 text="View the source code"
             />
             <Button href="../" text="Return to Main Menu" newTab={false} />
-            <Footer />
         </div>
     );
 }

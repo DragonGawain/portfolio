@@ -15,6 +15,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
     title: "Craig Kogan",
     description: "Craig Kogan's personal portfolio website.",
+    keywords: "craig, kogan",
+    // openGraph: {
+    //     type: "website",
+    //     url: "https://www.craigkogan.ca",
+    //     title: "Craig Kogan",
+    //     description: "Craig Kogan's personal portfolio website.",
+    // },
 };
 
 export default function RootLayout({

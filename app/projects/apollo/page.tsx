@@ -1,4 +1,3 @@
-import Footer from "@/components/Footer";
 import Button from "@/components/ui/Button";
 
 export default function Apollo() {
@@ -133,7 +132,6 @@ export default function Apollo() {
                 text="View the source code"
             />
             <Button href="../" text="Return to Main Menu" newTab={false} />
-            <Footer />
         </div>
     );
 }
